@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Practice quiz for CNCF CNPA certification exam">
+    <meta name="theme-color" content="#2196F3">
+    <title>CNPA Exam Quiz</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/icons/icon-192.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>🎓 CNPA Exam Quiz</h1>
+            <p class="subtitle">Cloud Native Platform Engineering Associate</p>
+        </header>
+
+        <main id="main-content">
+            <!-- Home Screen -->
+            <section id="home-screen" class="screen active">
+                <div class="card">
+                    <h2>Welcome!</h2>
+                    <p>Test your knowledge for the CNCF Certified Cloud Native Platform Engineering Associate exam.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="total-questions">50</span>
+                            <span class="stat-label">Questions</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="completed-count">0</span>
+                            <span class="stat-label">Completed</span>
+                        </div>
+                    </div>
+                    <button id="start-quiz-btn" class="btn btn-primary">Start Quiz</button>
+                    <button id="continue-quiz-btn" class="btn btn-secondary" style="display: none;">Continue Quiz</button>
+                </div>
+            </section>
+
+            <!-- Quiz Screen -->
+            <section id="quiz-screen" class="screen">
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <div class="question-info">
+                    <span id="question-number">Question 1 of 50</span>
+                    <span id="question-difficulty" class="badge">Easy</span>
+                </div>
+                
+                <div class="card">
+                    <h3 id="question-text">Loading question...</h3>
+                    <div id="options-container" class="options"></div>
+                    
+                    <div id="explanation" class="explanation" style="display: none;">
+                        <h4>Explanation:</h4>
+                        <p id="explanation-text"></p>
+                    </div>
+                    
+                    <div class="quiz-actions">
+                        <button id="submit-answer-btn" class="btn btn-primary" disabled>Submit Answer</button>
+                        <button id="next-question-btn" class="btn btn-primary" style="display: none;">Next Question</button>
+                        <button id="quit-quiz-btn" class="btn btn-secondary">Quit Quiz</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Screen -->
+            <section id="results-screen" class="screen">
+                <div class="card">
+                    <h2>Quiz Complete! 🎉</h2>
+                    <div class="results-summary">
+                        <div class="result-item">
+                            <span class="result-label">Score:</span>
+                            <span id="final-score" class="result-value">0/0</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Percentage:</span>
+                            <span id="final-percentage" class="result-value">0%</span>
+                        </div>
+                    </div>
+                    <button id="restart-quiz-btn" class="btn btn-primary">Start New Quiz</button>
+                    <button id="home-btn" class="btn btn-secondary">Back to Home</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Unofficial practice questions for CNPA certification</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/db.js"></script>
+    <script src="/js/quiz.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/sw-register.js"></script>
+</body>
+</html>

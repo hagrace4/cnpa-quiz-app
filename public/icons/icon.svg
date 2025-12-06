@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2196F3"/>
+      <stop offset="100%" style="stop-color:#1976D2"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="512" height="512" rx="64" fill="url(#bg)"/>
+  <!-- Cloud icon -->
+  <path d="M380 280c0-44.2-35.8-80-80-80-8.8 0-17.3 1.4-25.2 4.1C262.5 168.5 226.5 144 184 144c-57.4 0-104 46.6-104 104 0 4.7.3 9.3.9 13.8C52.5 273.5 32 302.5 32 336c0 44.2 35.8 80 80 80h248c44.2 0 80-35.8 80-80 0-26.5-12.9-50-32.7-64.6 1.8-7.5 2.7-15.3 2.7-23.4z" fill="white" opacity="0.9" transform="translate(0, -20)"/>
+  <!-- Checkmark -->
+  <path d="M200 340l60 60 120-120" stroke="#4CAF50" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- CNPA text -->
+  <text x="256" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="white">CNPA</text>
+</svg>
