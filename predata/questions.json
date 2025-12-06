@@ -1,0 +1,534 @@
+add_q(
+    "CNPA-001",
+    "Platform Engineering Core Fundamentals",
+    "Automation and Efficiency",
+    "easy",
+    "single_choice",
+    "What is the goal of automating processes in platform teams?",
+    [
+        ("A", "Reducing time spent on repetitive tasks."),
+        ("B", "Focusing on manual processes."),
+        ("C", "Increasing the number of tasks completed."),
+        ("D", "Ensuring high-quality coding standards.")
+    ],
+    ["A"],
+    "The primary goal of automation in platform teams is to reduce the manual and repetitive workload, allowing engineers to focus on more valuable, strategic activities.",
+    ["automation", "processes", "efficiency"]
+)
+
+add_q(
+    "CNPA-002",
+    "Platform Engineering Core Fundamentals",
+    "Platform Efficiency and Strategy",
+    "medium",
+    "single_choice",
+    "Which of the following strategies should a team prioritize to enhance platform efficiency?",
+    [
+        ("A", "Encourage teams to handle all platform tools independently without guidance."),
+        ("B", "Implement manual updates for all cluster configurations."),
+        ("C", "Automate the version bump process (or cluster updates)."),
+        ("D", "Conduct weekly meetings to discuss every minor update.")
+    ],
+    ["C"],
+    "Automating routine operational tasks like version bumps and cluster updates significantly enhances platform efficiency, reduces human error, and frees up the team for higher-value work.",
+    ["efficiency", "automation", "updates"]
+)
+
+add_q(
+    "CNPA-003",
+    "Platform Architecture and Capabilities",
+    "Multi-Cluster Management",
+    "hard",
+    "single_choice",
+    "In a multi-cluster Kubernetes setup, which approach effectively manages the deployment of multiple interdependent applications together as a unit?",
+    [
+        ("A", "Employing a declarative application deployment definition."),
+        ("B", "Creating separate Git repositories per application."),
+        ("C", "Direct deployments from CI/CD with Git configuration."),
+        ("D", "Using Helm for application packaging with manual deployments.")
+    ],
+    ["A"],
+    "Using a declarative application deployment definition allows you to manage the state of all interdependent applications as a single unit, ensuring consistency and simplifying management across multiple clusters.",
+    ["multi-cluster", "declarative", "deployment"]
+)
+
+add_q(
+    "CNPA-004",
+    "Platform Security and Compliance",
+    "CI/CD and SBOM",
+    "medium",
+    "single_choice",
+    "In the context of platform engineering and the effective delivery of platform software, which of the following statements describes the role of CI/CD pipelines in relation to Software Bill of Materials (SBOM) and security scanning?",
+    [
+        ("A", "SBOM generation and security scanning are particularly valuable for application software. While platform software may have different security considerations, these practices are highly beneficial within CI/CD pipelines for applications."),
+        ("B", "CI/CD pipelines should integrate SBOM generation and security scanning as automated steps within the build and test phases to ensure early detection of vulnerabilities and maintain a clear inventory of components."),
+        ("C", "CI/CD pipelines are designed to accelerate the delivery of platform software, and adding SBOM generation and security scanning would slow down the process, so these activities are better suited for periodic audits conducted outside of the pipeline."),
+        ("D", "CI/CD pipelines are primarily for automating deployments; SBOM generation and security scanning are separate, manual processes performed after deployment.")
+    ],
+    ["B"],
+    "Integrating SBOM generation and security scanning directly into the CI/CD pipeline automates these critical security practices, allowing for the early detection of vulnerabilities and maintaining an up-to-date inventory of all software components.",
+    ["ci/cd", "sbom", "security"]
+)
+
+add_q(
+    "CNPA-005",
+    "Developer Experience",
+    "Abstraction and Simplification",
+    "easy",
+    "single_choice",
+    "A developer is struggling to access the necessary services on a cloud native platform due to complex Kubernetes configurations. What approach can best simplify their access to platform capabilities?",
+    [
+        ("A", "Increase the number of required configurations to enhance security."),
+        ("B", "Implement a web portal that abstracts the Kubernetes complexities."),
+        ("C", "Limit user access to only a few services."),
+        ("D", "Provide detailed documentation on Kubernetes configurations.")
+    ],
+    ["B"],
+    "Implementing a web portal or a similar interface that abstracts the underlying Kubernetes complexities provides developers with a simplified, self-service way to access the platform capabilities they need without needing to understand the low-level details.",
+    ["developer experience", "abstraction", "portal"]
+)
+add_q(
+    "CNPA-006",
+    "Platform Architecture and Capabilities",
+    "Platform Team Responsibilities",
+    "easy",
+    "single_choice",
+    "What is the primary responsibility of a platform team in a cloud-native environment?",
+    [
+        ("A", "Developing end-user applications."),
+        ("B", "Managing the underlying infrastructure and providing self-service APIs for developers."),
+        ("C", "Writing marketing content for the platform."),
+        ("D", "Performing manual database migrations for all teams.")
+    ],
+    ["B"],
+    "The core responsibility of a platform team is to manage the shared infrastructure (like Kubernetes clusters) and expose it as a set of stable, self-service APIs and tools that developers can use without needing to understand the underlying complexity.",
+    ["platform team", "responsibilities", "self-service"]
+)
+
+add_q(
+    "CNPA-007",
+    "Platform Architecture and Capabilities",
+    "Internal Developer Platform (IDP)",
+    "medium",
+    "single_choice",
+    "Which of the following best describes an Internal Developer Platform (IDP)?",
+    [
+        ("A", "A public cloud service like AWS or Azure."),
+        ("B", "A set of tools and capabilities built on top of the tech stack, designed to reduce cognitive load for developers and enable self-service."),
+        ("C", "A physical server room managed by the IT department."),
+        ("D", "A collection of coding standards and style guides.")
+    ],
+    ["B"],
+    "An Internal Developer Platform (IDP) is a curated set of tools, technologies, and capabilities that provides a paved path for developers, reducing cognitive load and allowing them to self-serve their infrastructure needs.",
+    ["idp", "internal developer platform", "self-service"]
+)
+
+add_q(
+    "CNPA-008",
+    "Platform Architecture and Capabilities",
+    "Platform Architecture and Capabilities",
+    "medium",
+    "single_choice",
+    "A platform architecture includes a \"foundation\" layer (Kubernetes + networking), a \"platform services\" layer (databases, messaging, observability), and a \"developer experience\" layer (portals and templates). What is the main benefit of structuring the platform in layers like this?",
+    [
+        ("A", "It ensures that only one team can deploy services across all layers."),
+        ("B", "It allows the platform team to hide foundational complexity behind stable, higher-level capabilities for application teams."),
+        ("C", "It guarantees that no changes are ever needed in the foundation layer once built."),
+        ("D", "It makes it easier for each product team to implement its own platform from scratch.")
+    ],
+    ["B"],
+    "Layered platform architectures encapsulate foundational complexity (like clusters and networking) and expose higher-level, stable capabilities to application teams, improving reuse and reducing cognitive load.",
+    ["architecture", "layers", "abstractions"]
+)
+
+add_q(
+    "CNPA-009",
+    "Platform Security and Compliance",
+    "Container Security",
+    "hard",
+    "single_choice",
+    "A security scan reveals a critical vulnerability in a base image used by several applications. What is the most effective long-term strategy to address this issue?",
+    [
+        ("A", "Manually update the image in each application's repository."),
+        ("B", "Ignore the vulnerability if the application is not exposed to the public internet."),
+        ("C", "Use a CI/CD pipeline to automatically rebuild and redeploy all applications using the updated base image."),
+        ("D", "Wait for the application teams to notice and fix it themselves.")
+    ],
+    ["C"],
+    "Automating the rebuild and redeployment process via a CI/CD pipeline ensures that all affected applications are updated consistently and quickly when a vulnerability is found in a shared base image, which is the most effective long-term strategy.",
+    ["security", "ci/cd", "vulnerability"]
+)
+
+add_q(
+    "CNPA-010",
+    "Observability and Monitoring",
+    "Monitoring and Logging",
+    "medium",
+    "single_choice",
+    "Why is a centralized logging system crucial for a platform team?",
+    [
+        ("A", "It allows the platform team to read every developer's personal emails."),
+        ("B", "It provides a single, searchable location to diagnose issues across all applications and infrastructure, reducing mean time to resolution (MTTR)."),
+        ("C", "It is a requirement for all Kubernetes installations."),
+        ("D", "It replaces the need for monitoring metrics.")
+    ],
+    ["B"],
+    "A centralized logging system aggregates logs from all services and infrastructure components into one place, making it significantly faster and easier to troubleshoot and diagnose issues, thereby reducing the mean time to resolution (MTTR).",
+    ["logging", "observability", "troubleshooting"]
+)
+add_q(
+    "CNPA-011",
+    "Platform Engineering Core Fundamentals",
+    "Platform Team Goals",
+    "easy",
+    "single_choice",
+    "What is the primary goal of a platform engineering team?",
+    [
+        ("A", "To write all the application code for the company."),
+        ("B", "To enable product development teams to work with higher-level abstractions and self-service capabilities."),
+        ("C", "To manage the company's marketing website."),
+        ("D", "To enforce strict coding standards through manual code reviews.")
+    ],
+    ["B"],
+    "The primary goal of platform engineering is to create and maintain an internal platform that provides product development teams with self-service tools and higher-level abstractions, allowing them to deliver value faster and more independently.",
+    ["platform team", "goals", "self-service"]
+)
+
+add_q(
+    "CNPA-012",
+    "Developer Experience",
+    "Self-Service and Cognitive Load",
+    "medium",
+    "single_choice",
+    "How does a well-designed platform reduce cognitive load for developers?",
+    [
+        ("A", "By providing detailed documentation on low-level infrastructure configuration."),
+        ("B", "By abstracting the complexity of the underlying infrastructure into simple, reusable components and APIs."),
+        ("C", "By requiring developers to manage their own Kubernetes clusters."),
+        ("D", "By holding daily stand-up meetings to discuss infrastructure issues.")
+    ],
+    ["B"],
+    "A well-designed platform reduces cognitive load by hiding the complexity of the underlying infrastructure. Developers interact with simple, high-level APIs and services instead of dealing with the low-level details of Kubernetes, networking, and storage.",
+    ["cognitive load", "developer experience", "abstraction"]
+)
+
+add_q(
+    "CNPA-013",
+    "Platform Architecture and Capabilities",
+    "Platform as a Product",
+    "medium",
+    "single_choice",
+    "Treating the internal platform as a product means the platform team should:",
+    [
+        ("A", "Focus only on the technical implementation without gathering user feedback."),
+        ("B", "Consider the development teams as their customers and focus on their needs and user experience."),
+        ("C", "Build features based on the latest technology trends, regardless of user demand."),
+        ("D", "Charge internal teams for API usage.")
+    ],
+    ["B"],
+    "Treating the platform as a product involves shifting the mindset to see internal development teams as customers. This means the platform team must focus on understanding their needs, gathering feedback, and continuously improving the user experience to drive adoption.",
+    ["platform as a product", "customer focus", "ux"]
+)
+
+add_q(
+    "CNPA-014",
+    "Platform Security and Compliance",
+    "Compliance and Auditing",
+    "hard",
+    "single_choice",
+    "Which of the following is a key benefit of integrating compliance checks directly into a CI/CD pipeline?",
+    [
+        ("A", "It completely eliminates the need for manual security audits."),
+        ("B", "It ensures that compliance violations are caught and fixed early in the development process, reducing the cost of remediation."),
+        ("C", "It slows down the deployment process to allow for thorough manual review."),
+        ("D", "It is only necessary for companies in the financial sector.")
+    ],
+    ["B"],
+    "Integrating compliance checks (like policy-as-code) into the CI/CD pipeline, often referred to as 'shifting left', allows violations to be detected automatically and early. This significantly reduces the cost and effort required to fix them compared to finding them in production.",
+    ["compliance", "ci/cd", "policy-as-code"]
+)
+
+add_q(
+    "CNPA-015",
+    "Observability and Monitoring",
+    "Golden Signals",
+    "medium",
+    "single_choice",
+    "The 'four golden signals' of monitoring are latency, traffic, errors, and what?",
+    [
+        ("A", "CPU Usage."),
+        ("B", "Memory Consumption."),
+        ("C", "Disk I/O."),
+        ("D", "Saturation.")
+    ],
+    ["D"],
+    "The four golden signals, a concept from Google's SRE practices, provide a concise framework for monitoring. They are: Latency (how fast is it?), Traffic (how much is there?), Errors (is it failing?), and Saturation (how full is it?).",
+    ["observability", "golden signals", "sre"]
+)
+add_q(
+    "CNPA-016",
+    "Platform Architecture and Capabilities",
+    "Platform Team Composition",
+    "medium",
+    "single_choice",
+    "Which of the following roles is typically NOT part of a core platform engineering team?",
+    [
+        ("A", "Site Reliability Engineer (SRE)."),
+        ("B", "Product Manager for the Platform."),
+        ("C", "Database Administrator (DBA) for application-specific queries."),
+        ("D", "Software Engineer focusing on internal tooling.")
+    ],
+    ["C"],
+    "While a platform team provides database *services*, a DBA who handles application-specific schema changes and query optimization is typically embedded within an application team. The platform team's role is to provide the database as a reliable, self-service capability.",
+    ["platform team", "roles", "responsibilities"]
+)
+
+add_q(
+    "CNPA-017",
+    "Developer Experience",
+    "Paved Road Concept",
+    "easy",
+    "single_choice",
+    "What is the concept of a 'paved road' in platform engineering?",
+    [
+        ("A", "A physically secure server room for critical infrastructure."),
+        ("B", "A recommended, well-supported, and easy-to-use path for developers to build and deploy applications."),
+        ("C", "A strict set of rules that developers must follow without exception."),
+        ("D", "The network configuration for a Kubernetes cluster.")
+    ],
+    ["B"],
+    "The 'paved road' is a core concept in platform engineering. It represents the recommended, default, and simplest way for developers to accomplish a task, such as deploying an application. It is supported by the platform team but does not prevent teams from going 'off-road' if necessary.",
+    ["paved road", "developer experience", "best practices"]
+)
+
+add_q(
+    "CNPA-018",
+    "Platform Security and Compliance",
+    "Shifting Left",
+    "hard",
+    "single_choice",
+    "What does the 'shift left' principle in platform security aim to achieve?",
+    [
+        ("A", "Move all security personnel to sit with the development teams."),
+        ("B", "Integrate security practices like vulnerability scanning and compliance checks earlier in the software development lifecycle."),
+        ("C", "Prioritize fixing security vulnerabilities only after an application has been deployed to production."),
+        ("D", "Shift the responsibility of security entirely from the platform team to the application teams.")
+    ],
+    ["B"],
+    "The 'shift left' principle is about moving security and testing activities to earlier stages of the development process (to the 'left' on a timeline). By integrating them into the CI/CD pipeline, issues are found and fixed faster and cheaper, before they reach production.",
+    ["shift left", "security", "ci/cd"]
+)
+
+add_q(
+    "CNPA-019",
+    "Observability and Monitoring",
+    "Distributed Tracing",
+    "medium",
+    "single_choice",
+    "Why is distributed tracing particularly important in a microservices architecture?",
+    [
+        ("A", "It is used to generate a Software Bill of Materials (SBOM)."),
+        ("B", "It helps to track a single request as it flows through multiple services, making it easier to identify bottlenecks and errors."),
+        ("C", "It replaces the need for traditional logging and metrics."),
+        ("D", "It is only useful for synchronous, request-response communication.")
+    ],
+    ["B"],
+    "In a complex microservices environment, a single user action can trigger a chain of calls across many different services. Distributed tracing provides a way to follow this entire request path, which is crucial for diagnosing performance issues and locating the source of errors.",
+    ["distributed tracing", "microservices", "observability"]
+)
+
+add_q(
+    "CNPA-020",
+    "Platform Engineering Core Fundamentals",
+    "Platform Value",
+    "easy",
+    "single_choice",
+    "What is the main value proposition of building an internal developer platform?",
+    [
+        ("A", "To reduce the total number of developers needed at the company."),
+        ("B", "To increase developer productivity and accelerate the software delivery lifecycle."),
+        ("C", "To create a new revenue stream by selling the platform to other companies."),
+        ("D", "To standardize all applications on a single programming language.")
+    ],
+    ["B"],
+    "The core value of an internal platform is to make developers more productive. By providing self-service tools, automating repetitive tasks, and reducing cognitive load, the platform enables faster and more reliable software delivery.",
+    ["value proposition", "productivity", "platform"]
+)
+add_q(
+    "CNPA-021",
+    "Platform Architecture and Capabilities",
+    "Platform vs. Product Teams",
+    "medium",
+    "single_choice",
+    "How does the focus of a platform team differ from that of a product development team?",
+    [
+        ("A", "The platform team focuses on revenue-generating features, while the product team focuses on stability."),
+        ("B", "The platform team focuses on the 'how' (infrastructure, tooling, shared capabilities), while the product team focuses on the 'what' (features for end-users)."),
+        ("C", "The platform team writes code in Go, while the product team writes code in Python."),
+        ("D", "There is no difference; they have the same goals and responsibilities.")
+    ],
+    ["B"],
+    "A key distinction is the focus. Product teams are concerned with delivering value to external customers (the 'what'). Platform teams are concerned with providing the internal capabilities and infrastructure that enable product teams to do their work effectively (the 'how').",
+    ["platform team", "product team", "focus"]
+)
+
+add_q(
+    "CNPA-022",
+    "Developer Experience",
+    "Self-Service",
+    "easy",
+    "single_choice",
+    "What is the primary benefit of providing self-service capabilities to developers through a platform?",
+    [
+        ("A", "It ensures the platform team has more work to do managing manual requests."),
+        ("B", "It reduces dependency on the platform team and empowers developers to move faster."),
+        ("C", "It guarantees that all developers will use the platform correctly."),
+        ("D", "It eliminates the need for any documentation.")
+    ],
+    ["B"],
+    "Self-service is a cornerstone of good platform engineering. By providing automated, on-demand access to resources like environments, databases, and CI/CD pipelines, it reduces bottlenecks, lowers dependency on the platform team, and empowers developers to innovate faster.",
+    ["self-service", "developer experience", "empowerment"]
+)
+
+add_q(
+    "CNPA-023",
+    "Platform Security and Compliance",
+    "Secrets Management",
+    "hard",
+    "single_choice",
+    "Which of the following is a best practice for managing secrets (like API keys and passwords) in a platform environment?",
+    [
+        ("A", "Store secrets in plain text in a Git repository."),
+        ("B", "Hard-code secrets directly into the application container image."),
+        ("C", "Use a centralized secrets management tool (like HashiCorp Vault or Kubernetes Secrets) and inject them at runtime."),
+        ("D", "Email secrets to the developers who need them.")
+    ],
+    ["C"],
+    "Storing secrets in a centralized, encrypted management system and injecting them into applications at runtime is the industry best practice. This avoids exposing secrets in source code, container images, or configuration files, significantly improving security.",
+    ["secrets management", "security", "vault"]
+)
+
+add_q(
+    "CNPA-024",
+    "Observability and Monitoring",
+    "Service Level Objectives (SLOs)",
+    "medium",
+    "single_choice",
+    "What is a Service Level Objective (SLO)?",
+    [
+        ("A", "A promise made to customers about 100% uptime."),
+        ("B", "A specific, measurable target for the reliability of a service, such as '99.9% of requests will complete successfully in under 500ms'."),
+        ("C", "A list of all the services running in production."),
+        ("D", "The budget allocated to the operations team.")
+    ],
+    ["B"],
+    "An SLO is a key concept in SRE and observability. It is a formal, quantitative target for a service's reliability, based on metrics like latency, error rate, or availability. It provides a clear goal for the platform and development teams to work towards.",
+    ["slo", "service level objective", "reliability"]
+)
+
+add_q(
+    "CNPA-025",
+    "Platform Engineering Core Fundamentals",
+    "Reducing Cognitive Load",
+    "easy",
+    "single_choice",
+    "In the context of platform engineering, what does 'cognitive load' refer to?",
+    [
+        ("A", "The amount of memory a service consumes."),
+        ("B", "The total number of applications running on a platform."),
+        ("C", "The mental effort required by a developer to understand and use the platform to complete a task."),
+        ("D", "The complexity of the user interface for the end-product.")
+    ],
+    ["C"],
+    "Cognitive load, in this context, is the amount of mental work a developer has to do to understand the underlying systems, configurations, and processes required to deploy and run their application. A primary goal of a platform is to minimize this load.",
+    ["cognitive load", "developer experience", "simplicity"]
+)
+add_q(
+    "CNPA-026",
+    "Platform Architecture and Capabilities",
+    "GitOps Principles",
+    "medium",
+    "single_choice",
+    "Which of the following is a core principle of GitOps?",
+    [
+        ("A", "The desired state of the system is declaratively described in Git."),
+        ("B", "All changes must be applied manually using `kubectl` commands."),
+        ("C", "The Git repository contains only application source code, not infrastructure configurations."),
+        ("D", "Developers push directly to the production branch to trigger deployments.")
+    ],
+    ["A"],
+    "The foundational principle of GitOps is that Git is the single source of truth for the system's desired state. This state is described declaratively (e.g., with YAML files), and an automated process ensures the live system matches what's in Git.",
+    ["gitops", "declarative", "source of truth"]
+)
+
+add_q(
+    "CNPA-027",
+    "Platform Security and Compliance",
+    "Role-Based Access Control (RBAC)",
+    "easy",
+    "single_choice",
+    "What is the primary purpose of implementing Role-Based Access Control (RBAC) on a platform?",
+    [
+        ("A", "To automatically scale applications based on user roles."),
+        ("B", "To restrict access to resources based on a user's role and responsibilities, following the principle of least privilege."),
+        ("C", "To assign different pricing tiers to internal teams."),
+        ("D", "To manage the onboarding process for new developers.")
+    ],
+    ["B"],
+    "RBAC is a security mechanism used to control who can access what. By defining roles with specific permissions and assigning them to users, RBAC ensures that individuals and teams only have the minimum level of access required to perform their jobs, enhancing security.",
+    ["rbac", "security", "least privilege"]
+)
+
+add_q(
+    "CNPA-028",
+    "Observability and Monitoring",
+    "Metrics vs. Logs",
+    "medium",
+    "single_choice",
+    "How do metrics primarily differ from logs in an observability strategy?",
+    [
+        ("A", "Metrics are stored in a relational database, while logs are stored in a NoSQL database."),
+        ("B", "Metrics are numerical data that can be aggregated over time, while logs are detailed, event-based records."),
+        ("C", "Metrics are only useful for monitoring infrastructure, while logs are only for applications."),
+        ("D", "There is no difference; they are interchangeable terms for monitoring data.")
+    ],
+    ["B"],
+    "Metrics are structured numerical data (e.g., CPU usage, request count) designed for aggregation, alerting, and graphing over time. Logs are discrete, timestamped records of specific events (e.g., a user logged in, an error occurred) that provide detailed context for troubleshooting.",
+    ["metrics", "logs", "observability"]
+)
+
+add_q(
+    "CNPA-029",
+    "Developer Experience",
+    "Onboarding",
+    "easy",
+    "single_choice",
+    "What is a key outcome of a good developer onboarding experience provided by a platform?",
+    [
+        ("A", "It requires new developers to read all of the company's documentation before starting."),
+        ("B", "It ensures new developers can become productive and ship their first application to production quickly and independently."),
+        ("C", "It assigns a dedicated platform engineer to every new hire for their first month."),
+        ("D", "It focuses on teaching developers how to manage the underlying Kubernetes infrastructure.")
+    ],
+    ["B"],
+    "A successful onboarding experience, often accelerated by a good platform, reduces the time it takes for a new developer to become productive. By providing clear templates, automated workflows, and self-service tools, new hires can build and deploy code on their first day.",
+    ["onboarding", "developer experience", "productivity"]
+)
+
+add_q(
+    "CNPA-030",
+    "Platform Engineering Core Fundamentals",
+    "Platform Team Metrics",
+    "hard",
+    "single_choice",
+    "Which metric would be most useful for a platform team to track to measure its own success?",
+    [
+        ("A", "The number of lines of code written by the platform team."),
+        ("B", "The number of features shipped by the product teams."),
+        ("C", "The lead time for developers to deploy a new application to production."),
+        ("D", "The number of servers managed by the platform team.")
+    ],
+    ["C"],
+    "The success of a platform team is best measured by its impact on developer productivity and velocity. Tracking the 'lead time for changes' or the time it takes for a developer to get a feature from idea to production is a direct indicator of how well the platform is enabling its users.",
+    ["platform metrics", "success", "developer productivity"]
+)

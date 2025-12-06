@@ -1,0 +1,1765 @@
+{
+  "exam": "Certified Cloud Native Platform Engineering Associate",
+  "short_code": "CNPA",
+  "provider": "CNCF / Linux Foundation",
+  "version": "2025-12-06",
+  "source": "Unofficial practice questions - merged from multiple sources",
+  "questions": [
+    {
+      "id": "CNPA-001",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Automation and Efficiency",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What is the goal of automating processes in platform teams?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reducing time spent on repetitive tasks."
+        },
+        {
+          "id": "B",
+          "text": "Focusing on manual processes."
+        },
+        {
+          "id": "C",
+          "text": "Increasing the number of tasks completed."
+        },
+        {
+          "id": "D",
+          "text": "Ensuring high-quality coding standards."
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation": "The primary goal of automation in platform teams is to reduce the manual and repetitive workload, allowing engineers to focus on more valuable, strategic activities.",
+      "tags": [
+        "automation",
+        "processes",
+        "efficiency"
+      ]
+    },
+    {
+      "id": "CNPA-002",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Platform Efficiency and Strategy",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Which of the following strategies should a team prioritize to enhance platform efficiency?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Encourage teams to handle all platform tools independently without guidance."
+        },
+        {
+          "id": "B",
+          "text": "Implement manual updates for all cluster configurations."
+        },
+        {
+          "id": "C",
+          "text": "Automate the version bump process (or cluster updates)."
+        },
+        {
+          "id": "D",
+          "text": "Conduct weekly meetings to discuss every minor update."
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation": "Automating routine operational tasks like version bumps and cluster updates significantly enhances platform efficiency, reduces human error, and frees up the team for higher-value work.",
+      "tags": [
+        "efficiency",
+        "automation",
+        "updates"
+      ]
+    },
+    {
+      "id": "CNPA-003",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Multi-Cluster Management",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "In a multi-cluster Kubernetes setup, which approach effectively manages the deployment of multiple interdependent applications together as a unit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Employing a declarative application deployment definition."
+        },
+        {
+          "id": "B",
+          "text": "Creating separate Git repositories per application."
+        },
+        {
+          "id": "C",
+          "text": "Direct deployments from CI/CD with Git configuration."
+        },
+        {
+          "id": "D",
+          "text": "Using Helm for application packaging with manual deployments."
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation": "Using a declarative application deployment definition allows you to manage the state of all interdependent applications as a single unit, ensuring consistency and simplifying management across multiple clusters.",
+      "tags": [
+        "multi-cluster",
+        "declarative",
+        "deployment"
+      ]
+    },
+    {
+      "id": "CNPA-004",
+      "domain": "Platform Security and Compliance",
+      "topic": "CI/CD and SBOM",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "In the context of platform engineering and the effective delivery of platform software, which of the following statements describes the role of CI/CD pipelines in relation to Software Bill of Materials (SBOM) and security scanning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SBOM generation and security scanning are particularly valuable for application software. While platform software may have different security considerations, these practices are highly beneficial within CI/CD pipelines for applications."
+        },
+        {
+          "id": "B",
+          "text": "CI/CD pipelines should integrate SBOM generation and security scanning as automated steps within the build and test phases to ensure early detection of vulnerabilities and maintain a clear inventory of components."
+        },
+        {
+          "id": "C",
+          "text": "CI/CD pipelines are designed to accelerate the delivery of platform software, and adding SBOM generation and security scanning would slow down the process, so these activities are better suited for periodic audits conducted outside of the pipeline."
+        },
+        {
+          "id": "D",
+          "text": "CI/CD pipelines are primarily for automating deployments; SBOM generation and security scanning are separate, manual processes performed after deployment."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Integrating SBOM generation and security scanning directly into the CI/CD pipeline automates these critical security practices, allowing for the early detection of vulnerabilities and maintaining an up-to-date inventory of all software components.",
+      "tags": [
+        "ci/cd",
+        "sbom",
+        "security"
+      ]
+    },
+    {
+      "id": "CNPA-005",
+      "domain": "Developer Experience",
+      "topic": "Abstraction and Simplification",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "A developer is struggling to access the necessary services on a cloud native platform due to complex Kubernetes configurations. What approach can best simplify their access to platform capabilities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increase the number of required configurations to enhance security."
+        },
+        {
+          "id": "B",
+          "text": "Implement a web portal that abstracts the Kubernetes complexities."
+        },
+        {
+          "id": "C",
+          "text": "Limit user access to only a few services."
+        },
+        {
+          "id": "D",
+          "text": "Provide detailed documentation on Kubernetes configurations."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Implementing a web portal or a similar interface that abstracts the underlying Kubernetes complexities provides developers with a simplified, self-service way to access the platform capabilities they need without needing to understand the low-level details.",
+      "tags": [
+        "developer experience",
+        "abstraction",
+        "portal"
+      ]
+    },
+    {
+      "id": "CNPA-006",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Platform Team Responsibilities",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What is the primary responsibility of a platform team in a cloud-native environment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Developing end-user applications."
+        },
+        {
+          "id": "B",
+          "text": "Managing the underlying infrastructure and providing self-service APIs for developers."
+        },
+        {
+          "id": "C",
+          "text": "Writing marketing content for the platform."
+        },
+        {
+          "id": "D",
+          "text": "Performing manual database migrations for all teams."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "The core responsibility of a platform team is to manage the shared infrastructure (like Kubernetes clusters) and expose it as a set of stable, self-service APIs and tools that developers can use without needing to understand the underlying complexity.",
+      "tags": [
+        "platform team",
+        "responsibilities",
+        "self-service"
+      ]
+    },
+    {
+      "id": "CNPA-007",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Internal Developer Platform (IDP)",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Which of the following best describes an Internal Developer Platform (IDP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A public cloud service like AWS or Azure."
+        },
+        {
+          "id": "B",
+          "text": "A set of tools and capabilities built on top of the tech stack, designed to reduce cognitive load for developers and enable self-service."
+        },
+        {
+          "id": "C",
+          "text": "A physical server room managed by the IT department."
+        },
+        {
+          "id": "D",
+          "text": "A collection of coding standards and style guides."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "An Internal Developer Platform (IDP) is a curated set of tools, technologies, and capabilities that provides a paved path for developers, reducing cognitive load and allowing them to self-serve their infrastructure needs.",
+      "tags": [
+        "idp",
+        "internal developer platform",
+        "self-service"
+      ]
+    },
+    {
+      "id": "CNPA-008",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Platform Architecture and Capabilities",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": " layer (portals and templates). What is the main benefit of structuring the platform in layers like this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It ensures that only one team can deploy services across all layers."
+        },
+        {
+          "id": "B",
+          "text": "It allows the platform team to hide foundational complexity behind stable, higher-level capabilities for application teams."
+        },
+        {
+          "id": "C",
+          "text": "It guarantees that no changes are ever needed in the foundation layer once built."
+        },
+        {
+          "id": "D",
+          "text": "It makes it easier for each product team to implement its own platform from scratch."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Layered platform architectures encapsulate foundational complexity (like clusters and networking) and expose higher-level, stable capabilities to application teams, improving reuse and reducing cognitive load.",
+      "tags": [
+        "architecture",
+        "layers",
+        "abstractions"
+      ]
+    },
+    {
+      "id": "CNPA-009",
+      "domain": "Platform Security and Compliance",
+      "topic": "Container Security",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "A security scan reveals a critical vulnerability in a base image used by several applications. What is the most effective long-term strategy to address this issue?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Manually update the image in each application's repository."
+        },
+        {
+          "id": "B",
+          "text": "Ignore the vulnerability if the application is not exposed to the public internet."
+        },
+        {
+          "id": "C",
+          "text": "Use a CI/CD pipeline to automatically rebuild and redeploy all applications using the updated base image."
+        },
+        {
+          "id": "D",
+          "text": "Wait for the application teams to notice and fix it themselves."
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation": "Automating the rebuild and redeployment process via a CI/CD pipeline ensures that all affected applications are updated consistently and quickly when a vulnerability is found in a shared base image, which is the most effective long-term strategy.",
+      "tags": [
+        "security",
+        "ci/cd",
+        "vulnerability"
+      ]
+    },
+    {
+      "id": "CNPA-010",
+      "domain": "Observability and Monitoring",
+      "topic": "Monitoring and Logging",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Why is a centralized logging system crucial for a platform team?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It allows the platform team to read every developer's personal emails."
+        },
+        {
+          "id": "B",
+          "text": "It provides a single, searchable location to diagnose issues across all applications and infrastructure, reducing mean time to resolution (MTTR)."
+        },
+        {
+          "id": "C",
+          "text": "It is a requirement for all Kubernetes installations."
+        },
+        {
+          "id": "D",
+          "text": "It replaces the need for monitoring metrics."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "A centralized logging system aggregates logs from all services and infrastructure components into one place, making it significantly faster and easier to troubleshoot and diagnose issues, thereby reducing the mean time to resolution (MTTR).",
+      "tags": [
+        "logging",
+        "observability",
+        "troubleshooting"
+      ]
+    },
+    {
+      "id": "CNPA-011",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Platform Team Goals",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What is the primary goal of a platform engineering team?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To write all the application code for the company."
+        },
+        {
+          "id": "B",
+          "text": "To enable product development teams to work with higher-level abstractions and self-service capabilities."
+        },
+        {
+          "id": "C",
+          "text": "To manage the company's marketing website."
+        },
+        {
+          "id": "D",
+          "text": "To enforce strict coding standards through manual code reviews."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "The primary goal of platform engineering is to create and maintain an internal platform that provides product development teams with self-service tools and higher-level abstractions, allowing them to deliver value faster and more independently.",
+      "tags": [
+        "platform team",
+        "goals",
+        "self-service"
+      ]
+    },
+    {
+      "id": "CNPA-012",
+      "domain": "Developer Experience",
+      "topic": "Self-Service and Cognitive Load",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "How does a well-designed platform reduce cognitive load for developers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By providing detailed documentation on low-level infrastructure configuration."
+        },
+        {
+          "id": "B",
+          "text": "By abstracting the complexity of the underlying infrastructure into simple, reusable components and APIs."
+        },
+        {
+          "id": "C",
+          "text": "By requiring developers to manage their own Kubernetes clusters."
+        },
+        {
+          "id": "D",
+          "text": "By holding daily stand-up meetings to discuss infrastructure issues."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "A well-designed platform reduces cognitive load by hiding the complexity of the underlying infrastructure. Developers interact with simple, high-level APIs and services instead of dealing with the low-level details of Kubernetes, networking, and storage.",
+      "tags": [
+        "cognitive load",
+        "developer experience",
+        "abstraction"
+      ]
+    },
+    {
+      "id": "CNPA-013",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Platform as a Product",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Treating the internal platform as a product means the platform team should:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Focus only on the technical implementation without gathering user feedback."
+        },
+        {
+          "id": "B",
+          "text": "Consider the development teams as their customers and focus on their needs and user experience."
+        },
+        {
+          "id": "C",
+          "text": "Build features based on the latest technology trends, regardless of user demand."
+        },
+        {
+          "id": "D",
+          "text": "Charge internal teams for API usage."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Treating the platform as a product involves shifting the mindset to see internal development teams as customers. This means the platform team must focus on understanding their needs, gathering feedback, and continuously improving the user experience to drive adoption.",
+      "tags": [
+        "platform as a product",
+        "customer focus",
+        "ux"
+      ]
+    },
+    {
+      "id": "CNPA-014",
+      "domain": "Platform Security and Compliance",
+      "topic": "Compliance and Auditing",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "Which of the following is a key benefit of integrating compliance checks directly into a CI/CD pipeline?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It completely eliminates the need for manual security audits."
+        },
+        {
+          "id": "B",
+          "text": "It ensures that compliance violations are caught and fixed early in the development process, reducing the cost of remediation."
+        },
+        {
+          "id": "C",
+          "text": "It slows down the deployment process to allow for thorough manual review."
+        },
+        {
+          "id": "D",
+          "text": "It is only necessary for companies in the financial sector."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Integrating compliance checks (like policy-as-code) into the CI/CD pipeline, often referred to as 'shifting left', allows violations to be detected automatically and early. This significantly reduces the cost and effort required to fix them compared to finding them in production.",
+      "tags": [
+        "compliance",
+        "ci/cd",
+        "policy-as-code"
+      ]
+    },
+    {
+      "id": "CNPA-015",
+      "domain": "Observability and Monitoring",
+      "topic": "Golden Signals",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "The 'four golden signals' of monitoring are latency, traffic, errors, and what?",
+      "options": [
+        {
+          "id": "A",
+          "text": "CPU Usage."
+        },
+        {
+          "id": "B",
+          "text": "Memory Consumption."
+        },
+        {
+          "id": "C",
+          "text": "Disk I/O."
+        },
+        {
+          "id": "D",
+          "text": "Saturation."
+        }
+      ],
+      "correct_option_ids": [
+        "D"
+      ],
+      "explanation": "The four golden signals, a concept from Google's SRE practices, provide a concise framework for monitoring. They are: Latency (how fast is it?), Traffic (how much is there?), Errors (is it failing?), and Saturation (how full is it?).",
+      "tags": [
+        "observability",
+        "golden signals",
+        "sre"
+      ]
+    },
+    {
+      "id": "CNPA-016",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Platform Team Composition",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Which of the following roles is typically NOT part of a core platform engineering team?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Site Reliability Engineer (SRE)."
+        },
+        {
+          "id": "B",
+          "text": "Product Manager for the Platform."
+        },
+        {
+          "id": "C",
+          "text": "Database Administrator (DBA) for application-specific queries."
+        },
+        {
+          "id": "D",
+          "text": "Software Engineer focusing on internal tooling."
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation": "While a platform team provides database *services*, a DBA who handles application-specific schema changes and query optimization is typically embedded within an application team. The platform team's role is to provide the database as a reliable, self-service capability.",
+      "tags": [
+        "platform team",
+        "roles",
+        "responsibilities"
+      ]
+    },
+    {
+      "id": "CNPA-017",
+      "domain": "Developer Experience",
+      "topic": "Paved Road Concept",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What is the concept of a 'paved road' in platform engineering?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A physically secure server room for critical infrastructure."
+        },
+        {
+          "id": "B",
+          "text": "A recommended, well-supported, and easy-to-use path for developers to build and deploy applications."
+        },
+        {
+          "id": "C",
+          "text": "A strict set of rules that developers must follow without exception."
+        },
+        {
+          "id": "D",
+          "text": "The network configuration for a Kubernetes cluster."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "The 'paved road' is a core concept in platform engineering. It represents the recommended, default, and simplest way for developers to accomplish a task, such as deploying an application. It is supported by the platform team but does not prevent teams from going 'off-road' if necessary.",
+      "tags": [
+        "paved road",
+        "developer experience",
+        "best practices"
+      ]
+    },
+    {
+      "id": "CNPA-018",
+      "domain": "Platform Security and Compliance",
+      "topic": "Shifting Left",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What does the 'shift left' principle in platform security aim to achieve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Move all security personnel to sit with the development teams."
+        },
+        {
+          "id": "B",
+          "text": "Integrate security practices like vulnerability scanning and compliance checks earlier in the software development lifecycle."
+        },
+        {
+          "id": "C",
+          "text": "Prioritize fixing security vulnerabilities only after an application has been deployed to production."
+        },
+        {
+          "id": "D",
+          "text": "Shift the responsibility of security entirely from the platform team to the application teams."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "The 'shift left' principle is about moving security and testing activities to earlier stages of the development process (to the 'left' on a timeline). By integrating them into the CI/CD pipeline, issues are found and fixed faster and cheaper, before they reach production.",
+      "tags": [
+        "shift left",
+        "security",
+        "ci/cd"
+      ]
+    },
+    {
+      "id": "CNPA-019",
+      "domain": "Observability and Monitoring",
+      "topic": "Distributed Tracing",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Why is distributed tracing particularly important in a microservices architecture?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is used to generate a Software Bill of Materials (SBOM)."
+        },
+        {
+          "id": "B",
+          "text": "It helps to track a single request as it flows through multiple services, making it easier to identify bottlenecks and errors."
+        },
+        {
+          "id": "C",
+          "text": "It replaces the need for traditional logging and metrics."
+        },
+        {
+          "id": "D",
+          "text": "It is only useful for synchronous, request-response communication."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "In a complex microservices environment, a single user action can trigger a chain of calls across many different services. Distributed tracing provides a way to follow this entire request path, which is crucial for diagnosing performance issues and locating the source of errors.",
+      "tags": [
+        "distributed tracing",
+        "microservices",
+        "observability"
+      ]
+    },
+    {
+      "id": "CNPA-020",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Platform Value",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What is the main value proposition of building an internal developer platform?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To reduce the total number of developers needed at the company."
+        },
+        {
+          "id": "B",
+          "text": "To increase developer productivity and accelerate the software delivery lifecycle."
+        },
+        {
+          "id": "C",
+          "text": "To create a new revenue stream by selling the platform to other companies."
+        },
+        {
+          "id": "D",
+          "text": "To standardize all applications on a single programming language."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "The core value of an internal platform is to make developers more productive. By providing self-service tools, automating repetitive tasks, and reducing cognitive load, the platform enables faster and more reliable software delivery.",
+      "tags": [
+        "value proposition",
+        "productivity",
+        "platform"
+      ]
+    },
+    {
+      "id": "CNPA-021",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Platform vs. Product Teams",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "How does the focus of a platform team differ from that of a product development team?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The platform team focuses on revenue-generating features, while the product team focuses on stability."
+        },
+        {
+          "id": "B",
+          "text": "The platform team focuses on the 'how' (infrastructure, tooling, shared capabilities), while the product team focuses on the 'what' (features for end-users)."
+        },
+        {
+          "id": "C",
+          "text": "The platform team writes code in Go, while the product team writes code in Python."
+        },
+        {
+          "id": "D",
+          "text": "There is no difference; they have the same goals and responsibilities."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "A key distinction is the focus. Product teams are concerned with delivering value to external customers (the 'what'). Platform teams are concerned with providing the internal capabilities and infrastructure that enable product teams to do their work effectively (the 'how').",
+      "tags": [
+        "platform team",
+        "product team",
+        "focus"
+      ]
+    },
+    {
+      "id": "CNPA-022",
+      "domain": "Developer Experience",
+      "topic": "Self-Service",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What is the primary benefit of providing self-service capabilities to developers through a platform?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It ensures the platform team has more work to do managing manual requests."
+        },
+        {
+          "id": "B",
+          "text": "It reduces dependency on the platform team and empowers developers to move faster."
+        },
+        {
+          "id": "C",
+          "text": "It guarantees that all developers will use the platform correctly."
+        },
+        {
+          "id": "D",
+          "text": "It eliminates the need for any documentation."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Self-service is a cornerstone of good platform engineering. By providing automated, on-demand access to resources like environments, databases, and CI/CD pipelines, it reduces bottlenecks, lowers dependency on the platform team, and empowers developers to innovate faster.",
+      "tags": [
+        "self-service",
+        "developer experience",
+        "empowerment"
+      ]
+    },
+    {
+      "id": "CNPA-023",
+      "domain": "Platform Security and Compliance",
+      "topic": "Secrets Management",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "Which of the following is a best practice for managing secrets (like API keys and passwords) in a platform environment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Store secrets in plain text in a Git repository."
+        },
+        {
+          "id": "B",
+          "text": "Hard-code secrets directly into the application container image."
+        },
+        {
+          "id": "C",
+          "text": "Use a centralized secrets management tool (like HashiCorp Vault or Kubernetes Secrets) and inject them at runtime."
+        },
+        {
+          "id": "D",
+          "text": "Email secrets to the developers who need them."
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation": "Storing secrets in a centralized, encrypted management system and injecting them into applications at runtime is the industry best practice. This avoids exposing secrets in source code, container images, or configuration files, significantly improving security.",
+      "tags": [
+        "secrets management",
+        "security",
+        "vault"
+      ]
+    },
+    {
+      "id": "CNPA-024",
+      "domain": "Observability and Monitoring",
+      "topic": "Service Level Objectives (SLOs)",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is a Service Level Objective (SLO)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A promise made to customers about 100% uptime."
+        },
+        {
+          "id": "B",
+          "text": "A specific, measurable target for the reliability of a service, such as '99.9% of requests will complete successfully in under 500ms'."
+        },
+        {
+          "id": "C",
+          "text": "A list of all the services running in production."
+        },
+        {
+          "id": "D",
+          "text": "The budget allocated to the operations team."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "An SLO is a key concept in SRE and observability. It is a formal, quantitative target for a service's reliability, based on metrics like latency, error rate, or availability. It provides a clear goal for the platform and development teams to work towards.",
+      "tags": [
+        "slo",
+        "service level objective",
+        "reliability"
+      ]
+    },
+    {
+      "id": "CNPA-025",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Reducing Cognitive Load",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "In the context of platform engineering, what does 'cognitive load' refer to?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The amount of memory a service consumes."
+        },
+        {
+          "id": "B",
+          "text": "The total number of applications running on a platform."
+        },
+        {
+          "id": "C",
+          "text": "The mental effort required by a developer to understand and use the platform to complete a task."
+        },
+        {
+          "id": "D",
+          "text": "The complexity of the user interface for the end-product."
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation": "Cognitive load, in this context, is the amount of mental work a developer has to do to understand the underlying systems, configurations, and processes required to deploy and run their application. A primary goal of a platform is to minimize this load.",
+      "tags": [
+        "cognitive load",
+        "developer experience",
+        "simplicity"
+      ]
+    },
+    {
+      "id": "CNPA-026",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "GitOps Principles",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Which of the following is a core principle of GitOps?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The desired state of the system is declaratively described in Git."
+        },
+        {
+          "id": "B",
+          "text": "All changes must be applied manually using `kubectl` commands."
+        },
+        {
+          "id": "C",
+          "text": "The Git repository contains only application source code, not infrastructure configurations."
+        },
+        {
+          "id": "D",
+          "text": "Developers push directly to the production branch to trigger deployments."
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation": "The foundational principle of GitOps is that Git is the single source of truth for the system's desired state. This state is described declaratively (e.g., with YAML files), and an automated process ensures the live system matches what's in Git.",
+      "tags": [
+        "gitops",
+        "declarative",
+        "source of truth"
+      ]
+    },
+    {
+      "id": "CNPA-027",
+      "domain": "Platform Security and Compliance",
+      "topic": "Role-Based Access Control (RBAC)",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What is the primary purpose of implementing Role-Based Access Control (RBAC) on a platform?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To automatically scale applications based on user roles."
+        },
+        {
+          "id": "B",
+          "text": "To restrict access to resources based on a user's role and responsibilities, following the principle of least privilege."
+        },
+        {
+          "id": "C",
+          "text": "To assign different pricing tiers to internal teams."
+        },
+        {
+          "id": "D",
+          "text": "To manage the onboarding process for new developers."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "RBAC is a security mechanism used to control who can access what. By defining roles with specific permissions and assigning them to users, RBAC ensures that individuals and teams only have the minimum level of access required to perform their jobs, enhancing security.",
+      "tags": [
+        "rbac",
+        "security",
+        "least privilege"
+      ]
+    },
+    {
+      "id": "CNPA-028",
+      "domain": "Observability and Monitoring",
+      "topic": "Metrics vs. Logs",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "How do metrics primarily differ from logs in an observability strategy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Metrics are stored in a relational database, while logs are stored in a NoSQL database."
+        },
+        {
+          "id": "B",
+          "text": "Metrics are numerical data that can be aggregated over time, while logs are detailed, event-based records."
+        },
+        {
+          "id": "C",
+          "text": "Metrics are only useful for monitoring infrastructure, while logs are only for applications."
+        },
+        {
+          "id": "D",
+          "text": "There is no difference; they are interchangeable terms for monitoring data."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Metrics are structured numerical data (e.g., CPU usage, request count) designed for aggregation, alerting, and graphing over time. Logs are discrete, timestamped records of specific events (e.g., a user logged in, an error occurred) that provide detailed context for troubleshooting.",
+      "tags": [
+        "metrics",
+        "logs",
+        "observability"
+      ]
+    },
+    {
+      "id": "CNPA-029",
+      "domain": "Developer Experience",
+      "topic": "Onboarding",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What is a key outcome of a good developer onboarding experience provided by a platform?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It requires new developers to read all of the company's documentation before starting."
+        },
+        {
+          "id": "B",
+          "text": "It ensures new developers can become productive and ship their first application to production quickly and independently."
+        },
+        {
+          "id": "C",
+          "text": "It assigns a dedicated platform engineer to every new hire for their first month."
+        },
+        {
+          "id": "D",
+          "text": "It focuses on teaching developers how to manage the underlying Kubernetes infrastructure."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "A successful onboarding experience, often accelerated by a good platform, reduces the time it takes for a new developer to become productive. By providing clear templates, automated workflows, and self-service tools, new hires can build and deploy code on their first day.",
+      "tags": [
+        "onboarding",
+        "developer experience",
+        "productivity"
+      ]
+    },
+    {
+      "id": "CNPA-030",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Platform Team Metrics",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "Which metric would be most useful for a platform team to track to measure its own success?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The number of lines of code written by the platform team."
+        },
+        {
+          "id": "B",
+          "text": "The number of features shipped by the product teams."
+        },
+        {
+          "id": "C",
+          "text": "The lead time for developers to deploy a new application to production."
+        },
+        {
+          "id": "D",
+          "text": "The number of servers managed by the platform team."
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation": "The success of a platform team is best measured by its impact on developer productivity and velocity. Tracking the 'lead time for changes' or the time it takes for a developer to get a feature from idea to production is a direct indicator of how well the platform is enabling its users.",
+      "tags": [
+        "platform metrics",
+        "success",
+        "developer productivity"
+      ]
+    },
+    {
+      "id": "CNPA-031",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Declarative Resource Management",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "A platform team is migrating from shell scripts that call cloud CLIs to a GitOps-driven model using Kubernetes manifests and Terraform. Which statement best describes the \"declarative\" approach they are moving toward?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The platform team writes scripts that describe each step needed to provision resources in the correct order."
+        },
+        {
+          "id": "B",
+          "text": "The platform team defines the desired end-state of resources, and automated controllers continuously reconcile actual state to match it."
+        },
+        {
+          "id": "C",
+          "text": "The platform team provisions infrastructure manually once, then treats it as immutable and never changes it."
+        },
+        {
+          "id": "D",
+          "text": "The platform team relies on ticket-based processes so that operations can approve every change."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Declarative management focuses on describing the desired end-state of the system (for example, via YAML manifests or Terraform code). Controllers and tools then continuously reconcile actual state to the declared state, instead of running step-by-step imperative scripts.",
+      "tags": [
+        "declarative",
+        "gitops",
+        "infrastructure-as-code"
+      ]
+    },
+    {
+      "id": "CNPA-032",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Platform Engineering Goals, Objectives, and Approaches",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "Which option best captures the idea of treating an internal developer platform (IDP) as a product?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Prioritizing infrastructure uptime only, without gathering feedback from developers."
+        },
+        {
+          "id": "B",
+          "text": "Letting each application team build and operate its own platform independently."
+        },
+        {
+          "id": "C",
+          "text": "Defining clear users, value propositions, roadmaps, and feedback loops for the platform, similar to an external SaaS product."
+        },
+        {
+          "id": "D",
+          "text": "Focusing exclusively on cost optimization for infrastructure, regardless of developer experience."
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation": "Platform engineering emphasizes \"platform as a product\": you identify developer personas, clarify the platform’s value, maintain a roadmap, and use feedback and metrics to drive continuous improvement.",
+      "tags": [
+        "platform-as-a-product",
+        "idp",
+        "product-thinking"
+      ]
+    },
+    {
+      "id": "CNPA-033",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Platform Engineering Goals, Objectives, and Approaches",
+      "difficulty": "medium",
+      "question_type": "multiple_select",
+      "question_text": "A platform team's primary goal is to reduce cognitive load on application teams. Which TWO actions align with this goal?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Publishing opinionated golden-path templates for common workloads, including CI/CD and observability defaults."
+        },
+        {
+          "id": "B",
+          "text": "Requiring each team to design its own networking, security groups, and Kubernetes clusters from scratch."
+        },
+        {
+          "id": "C",
+          "text": "Providing a self-service portal where developers can request standardized environments with minimal inputs."
+        },
+        {
+          "id": "D",
+          "text": "Centralizing all deployments in a shared chat channel where operations manually run scripts on request."
+        }
+      ],
+      "correct_option_ids": [
+        "A",
+        "C"
+      ],
+      "explanation": "Reducing cognitive load means hiding platform complexity behind opinionated defaults and self-service workflows. Golden paths and simple self-service requests help developers focus on business logic rather than infrastructure details.",
+      "tags": [
+        "cognitive-load",
+        "golden-paths",
+        "self-service"
+      ]
+    },
+    {
+      "id": "CNPA-034",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Application Environments and Infrastructure Concepts",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "A platform engineer is standardizing environment definitions for dev, staging, and prod across multiple applications. Which practice best supports consistency and repeatability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Creating separate hand-written runbooks for each application and environment."
+        },
+        {
+          "id": "B",
+          "text": "Using a single shared production cluster with no separation of namespaces or policies."
+        },
+        {
+          "id": "C",
+          "text": "Defining environment configuration as code (for example, via Helm values or Kustomize overlays) that can be reused across applications."
+        },
+        {
+          "id": "D",
+          "text": "Letting each team individually define environments using their own ad-hoc conventions."
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation": "Defining environment configuration as code allows you to reuse patterns, enforce standards, and minimize drift between dev, staging, and production.",
+      "tags": [
+        "environments",
+        "configuration-as-code",
+        "standardization"
+      ]
+    },
+    {
+      "id": "CNPA-035",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "DevOps Practices in Platform Engineering",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "How does platform engineering most directly extend traditional DevOps practices?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By replacing DevOps with centralized operations teams and ticket queues."
+        },
+        {
+          "id": "B",
+          "text": "By focusing solely on infrastructure reliability and ignoring developer experience."
+        },
+        {
+          "id": "C",
+          "text": "By building reusable self-service tools, abstractions, and workflows that make DevOps practices scalable across many teams."
+        },
+        {
+          "id": "D",
+          "text": "By requiring every developer to become an expert in Kubernetes and cloud networking."
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation": "Platform engineering builds on DevOps by creating reusable, self-service capabilities (like templates, pipelines, and APIs) that scale DevOps practices across many product teams while improving developer experience.",
+      "tags": [
+        "devops",
+        "platform-engineering",
+        "self-service"
+      ]
+    },
+    {
+      "id": "CNPA-036",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Continuous Integration Fundamentals",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "Which outcome is the strongest indicator that continuous integration (CI) is working effectively for a platform?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Developers merge code directly to the main branch only once per month."
+        },
+        {
+          "id": "B",
+          "text": "Every commit triggers automated builds and tests, with fast feedback when a change breaks the main branch."
+        },
+        {
+          "id": "C",
+          "text": "All test execution is manual but documented in a runbook."
+        },
+        {
+          "id": "D",
+          "text": "Releases are manually assembled from multiple long-lived branches before deployment."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Effective CI provides rapid, automated feedback on every change, enabling small, frequent merges and catching integration issues early.",
+      "tags": [
+        "ci",
+        "automation",
+        "feedback-loops"
+      ]
+    },
+    {
+      "id": "CNPA-037",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Continuous Delivery and GitOps",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Which principle is core to GitOps for platform-managed workloads?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deployments are initiated manually from a web UI after tickets are approved."
+        },
+        {
+          "id": "B",
+          "text": "Git is the single source of truth for desired state, and controllers continuously reconcile running systems to match Git."
+        },
+        {
+          "id": "C",
+          "text": "Application containers are deployed directly from developer laptops to the cluster."
+        },
+        {
+          "id": "D",
+          "text": "Configuration changes are applied interactively using imperative kubectl commands on production clusters."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "GitOps treats Git as the canonical source of desired state. Automated agents reconcile the running system with what is declared in Git, providing versioning, auditability, and repeatability.",
+      "tags": [
+        "gitops",
+        "desired-state",
+        "reconciliation"
+      ]
+    },
+    {
+      "id": "CNPA-038",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Application Environments and Infrastructure Concepts",
+      "difficulty": "medium",
+      "question_type": "multiple_select",
+      "question_text": "A platform team is designing a multi-tenant Kubernetes cluster for several product teams. Which TWO practices best support safe multi-tenancy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Using separate namespaces per team with appropriate RBAC and network policies."
+        },
+        {
+          "id": "B",
+          "text": "Granting all developers cluster-admin so they can troubleshoot issues quickly."
+        },
+        {
+          "id": "C",
+          "text": "Enforcing resource quotas and limit ranges per namespace."
+        },
+        {
+          "id": "D",
+          "text": "Sharing a single namespace across all teams to simplify configuration."
+        }
+      ],
+      "correct_option_ids": [
+        "A",
+        "C"
+      ],
+      "explanation": "Namespaces with RBAC and network policies provide isolation between teams, while resource quotas and limits prevent noisy neighbors from consuming all resources in a shared cluster.",
+      "tags": [
+        "multi-tenancy",
+        "kubernetes",
+        "security",
+        "resource-management"
+      ]
+    },
+    {
+      "id": "CNPA-039",
+      "domain": "Platform Observability, Security, and Conformance",
+      "topic": "Observability Fundamentals: Traces, Metrics, Logs, and Events",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "Which combination represents the four primary signals of observability in a modern cloud native platform?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Metrics, logs, traces, and events."
+        },
+        {
+          "id": "B",
+          "text": "CPU, memory, disk, and network."
+        },
+        {
+          "id": "C",
+          "text": "Requests, errors, latency, and saturation."
+        },
+        {
+          "id": "D",
+          "text": "Dashboards, alerts, runbooks, and on-call schedules."
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation": "Common observability guidance groups telemetry into four signals: metrics, logs, traces, and events, which together provide a holistic view of platform behavior.",
+      "tags": [
+        "observability",
+        "telemetry",
+        "signals"
+      ]
+    },
+    {
+      "id": "CNPA-040",
+      "domain": "Platform Observability, Security, and Conformance",
+      "topic": "Observability Fundamentals: Traces, Metrics, Logs, and Events",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "A team sees an increase in error rate on a service-level objective (SLO) dashboard. What is the BEST next step to understand which specific requests are failing and why?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Check only high-level CPU metrics for the entire cluster."
+        },
+        {
+          "id": "B",
+          "text": "Inspect distributed traces and correlated logs for the affected service."
+        },
+        {
+          "id": "C",
+          "text": "Increase the pod replica count for all services in the namespace."
+        },
+        {
+          "id": "D",
+          "text": "Rotate application secrets and redeploy the platform."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "SLO dashboards surface symptoms. To understand which requests are failing and the root cause, you typically drill into distributed traces and correlated logs for the specific service or route.",
+      "tags": [
+        "slo",
+        "traces",
+        "logs",
+        "troubleshooting"
+      ]
+    },
+    {
+      "id": "CNPA-041",
+      "domain": "Platform Observability, Security, and Conformance",
+      "topic": "Secure Service Communication",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "In a service mesh used by the platform, what is the primary security benefit of enabling mutual TLS (mTLS) between services?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It compresses network traffic to reduce bandwidth costs."
+        },
+        {
+          "id": "B",
+          "text": "It automatically scales services up and down based on load."
+        },
+        {
+          "id": "C",
+          "text": "It encrypts traffic in transit and authenticates both the client and server."
+        },
+        {
+          "id": "D",
+          "text": "It replaces the need for any network policies or firewalls."
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation": "Mutual TLS (mTLS) provides encryption in transit and ensures both ends of a connection can authenticate each other, improving service-to-service security.",
+      "tags": [
+        "mtls",
+        "service-mesh",
+        "network-security"
+      ]
+    },
+    {
+      "id": "CNPA-042",
+      "domain": "Platform Observability, Security, and Conformance",
+      "topic": "Kubernetes Security Essentials",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Which practice aligns BEST with the principle of least privilege in a Kubernetes-based platform?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Assigning cluster-admin to all CI/CD service accounts to avoid permission errors."
+        },
+        {
+          "id": "B",
+          "text": "Creating narrowly scoped Roles and RoleBindings for each service account to grant only the permissions it needs."
+        },
+        {
+          "id": "C",
+          "text": "Disabling authentication and relying on network firewalls only."
+        },
+        {
+          "id": "D",
+          "text": "Using a single service account for all workloads in the cluster."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Least privilege means granting only the permissions that are strictly necessary. In Kubernetes, this is implemented by creating specific Roles and binding them to individual service accounts as needed.",
+      "tags": [
+        "rbac",
+        "least-privilege",
+        "security"
+      ]
+    },
+    {
+      "id": "CNPA-043",
+      "domain": "Continuous Delivery & Platform Engineering",
+      "topic": "Continuous Integration Pipelines Overview",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "Which sequence BEST represents a typical CI pipeline for a microservice managed by the platform?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Clone repo → run tests → build container image → push image → publish test reports."
+        },
+        {
+          "id": "B",
+          "text": "Manually edit production manifests → deploy to production → run tests → push code to Git."
+        },
+        {
+          "id": "C",
+          "text": "Build container image → modify code directly in the cluster → commit changes later."
+        },
+        {
+          "id": "D",
+          "text": "Run performance tests only → deploy directly to production."
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation": "A standard CI pipeline pulls code, runs automated tests, builds and tags an artifact (such as a container image), pushes it to a registry, and publishes test results for feedback.",
+      "tags": [
+        "ci",
+        "pipelines",
+        "automation"
+      ]
+    },
+    {
+      "id": "CNPA-044",
+      "domain": "Continuous Delivery & Platform Engineering",
+      "topic": "CI/CD Relationship Fundamentals",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "In a well-designed platform, how do CI and CD typically interact?",
+      "options": [
+        {
+          "id": "A",
+          "text": "CI pipelines deploy directly to production without any intermediate stages."
+        },
+        {
+          "id": "B",
+          "text": "CI produces tested, versioned artifacts; CD consumes those artifacts and automates their promotion through environments."
+        },
+        {
+          "id": "C",
+          "text": "CD runs unit tests, while CI runs only end-to-end tests."
+        },
+        {
+          "id": "D",
+          "text": "CI and CD both independently build separate container images for the same commit."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "CI focuses on building and testing code, producing versioned artifacts. CD then orchestrates the promotion of those artifacts through environments toward production using automated workflows.",
+      "tags": [
+        "ci",
+        "cd",
+        "separation-of-concerns"
+      ]
+    },
+    {
+      "id": "CNPA-045",
+      "domain": "Continuous Delivery & Platform Engineering",
+      "topic": "GitOps for Application Environments",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "A deployment caused an outage shortly after a GitOps controller applied a new commit to the production environment repo. What is the MOST GitOps-aligned rollback strategy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Manually edit resources in the cluster using kubectl to undo the change."
+        },
+        {
+          "id": "B",
+          "text": "Force-restart all pods in the namespace and hope the issue resolves."
+        },
+        {
+          "id": "C",
+          "text": "Revert the problematic commit in Git and let the GitOps controller reconcile the cluster back to the previous state."
+        },
+        {
+          "id": "D",
+          "text": "Manually scale the deployment to zero and leave it that way permanently."
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation": "In GitOps, you roll back by reverting or adjusting Git history so controllers reconcile the cluster back to a known good state, rather than manually editing cluster resources.",
+      "tags": [
+        "gitops",
+        "rollback",
+        "production"
+      ]
+    },
+    {
+      "id": "CNPA-046",
+      "domain": "Platform APIs and Provisioning Infrastructure",
+      "topic": "Kubernetes Reconciliation Loop",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Which description BEST explains the Kubernetes reconciliation loop from a platform perspective?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A one-time script that provisions a cluster when it is first created."
+        },
+        {
+          "id": "B",
+          "text": "A continuous process where controllers observe the current cluster state and make changes to drive it toward the desired state defined in resources."
+        },
+        {
+          "id": "C",
+          "text": "A manual checklist operators follow before each deployment."
+        },
+        {
+          "id": "D",
+          "text": "A security feature that prevents any changes to cluster resources."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Kubernetes controllers implement reconciliation loops: they continuously compare the current state with the desired state declared in resources and take actions to converge the two.",
+      "tags": [
+        "reconciliation-loop",
+        "controllers",
+        "desired-state"
+      ]
+    },
+    {
+      "id": "CNPA-047",
+      "domain": "Platform APIs and Provisioning Infrastructure",
+      "topic": "APIs for Self-Service Platforms (CRDs)",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "A platform team introduces a custom resource definition (CRD) called \"ApplicationEnvironment\" that encapsulates namespaces, network policies, and observability defaults. What is the MAIN benefit of exposing this as a CRD to application teams?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It allows developers to bypass the platform team and edit the Kubernetes API server configuration directly."
+        },
+        {
+          "id": "B",
+          "text": "It gives developers a higher-level, opinionated API to request environments without understanding all the underlying Kubernetes resources."
+        },
+        {
+          "id": "C",
+          "text": "It forces every team to run its own Kubernetes control plane."
+        },
+        {
+          "id": "D",
+          "text": "It eliminates the need for any validation or governance on platform resources."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "CRDs let platform teams design higher-level, opinionated APIs. Developers can request complex capabilities (like environments) via a simple spec, while controllers handle the details and enforce standards.",
+      "tags": [
+        "crd",
+        "self-service",
+        "abstractions"
+      ]
+    },
+    {
+      "id": "CNPA-048",
+      "domain": "IDPs and Developer Experience",
+      "topic": "Developer Portals for Platform Adoption",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "Why might a platform team adopt a developer portal such as Backstage for their internal developer platform (IDP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To expose raw infrastructure APIs directly without any opinionated defaults."
+        },
+        {
+          "id": "B",
+          "text": "To provide a single entry point where developers can discover services, documentation, templates, and self-service actions."
+        },
+        {
+          "id": "C",
+          "text": "To replace all CI/CD systems with a monolithic web console."
+        },
+        {
+          "id": "D",
+          "text": "To prevent developers from seeing which services exist in the organization."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Developer portals give teams a central place to discover services, documentation, and golden-path templates, and to trigger self-service actions, improving platform adoption and developer experience.",
+      "tags": [
+        "developer-portal",
+        "backstage",
+        "idp"
+      ]
+    },
+    {
+      "id": "CNPA-049",
+      "domain": "IDPs and Developer Experience",
+      "topic": "AI/ML in Platform Automation",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Which example BEST illustrates a responsible use of AI/ML in a platform engineering context?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Automatically merging any pull request that mentions \"fix\" in the title."
+        },
+        {
+          "id": "B",
+          "text": "Using ML-based anomaly detection on metrics to suggest likely root causes and related dashboards during incidents."
+        },
+        {
+          "id": "C",
+          "text": "Letting a chatbot directly modify production cluster configuration without human review."
+        },
+        {
+          "id": "D",
+          "text": "Replacing all security policies with a black-box AI model that cannot be audited."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "AI/ML can augment platform operations by, for example, detecting anomalies in telemetry and suggesting likely causes or dashboards. High-risk actions, such as direct production changes, should still require human review and auditable policies.",
+      "tags": [
+        "ai",
+        "ml",
+        "observability",
+        "incident-response"
+      ]
+    },
+    {
+      "id": "CNPA-050",
+      "domain": "Measuring your Platform",
+      "topic": "DORA Metrics for Platform Initiatives",
+      "difficulty": "easy",
+      "question_type": "multiple_select",
+      "question_text": "Which TWO metrics are part of the commonly referenced DORA metrics used to evaluate software delivery performance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deployment frequency."
+        },
+        {
+          "id": "B",
+          "text": "Lead time for changes."
+        },
+        {
+          "id": "C",
+          "text": "Total number of microservices in the organization."
+        },
+        {
+          "id": "D",
+          "text": "Number of lines of code per service."
+        }
+      ],
+      "correct_option_ids": [
+        "A",
+        "B"
+      ],
+      "explanation": "DORA metrics include deployment frequency, lead time for changes, change failure rate, and mean time to restore (MTTR). They help assess delivery performance rather than code size or service count.",
+      "tags": [
+        "dora",
+        "metrics",
+        "delivery-performance"
+      ]
+    }
+  ]
+}
