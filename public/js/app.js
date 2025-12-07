@@ -36,18 +36,25 @@ class App {
 
     async init() {
         try {
+            console.log('Initializing app...');
             await quizDB.init();
-            await quiz.loadQuestions();
+            console.log('Database initialized');
             
-            this.elements.totalQuestions.textContent = quiz.questions.length;
+            await quiz.loadQuestions();
+            console.log('Questions loaded:', quiz.allQuestions.length);
+            
+            // Display total available questions in the bank
+            this.elements.totalQuestions.textContent = quiz.getTotalQuestionsAvailable();
             
             // Check for saved progress
             const hasProgress = await quiz.loadState();
             if (hasProgress) {
                 this.elements.continueBtn.style.display = 'inline-block';
+                this.elements.completedCount.textContent = quiz.currentQuestionIndex;
             }
             
             this.attachEventListeners();
+            console.log('App initialized successfully');
         } catch (error) {
             console.error('Initialization error:', error);
             alert('Failed to load quiz data. Please refresh the page.');
@@ -70,12 +77,31 @@ class App {
     }
 
     async startNewQuiz() {
-        quiz.reset();
-        quiz.shuffleQuestions();
-        await quizDB.clearProgress();
-        this.elements.continueBtn.style.display = 'none';
-        this.showScreen('quiz');
-        this.displayQuestion();
+        try {
+            console.log('Starting new quiz...');
+            console.log('All questions available:', quiz.allQuestions.length);
+            
+            quiz.reset();
+            console.log('Quiz reset complete');
+            
+            quiz.selectRandomQuestions();  // Select random 50 questions from the bank
+            console.log('Selected questions:', quiz.questions.length);
+            
+            if (quiz.questions.length === 0) {
+                console.error('No questions selected!');
+                alert('No questions available. Please check the question database.');
+                return;
+            }
+            
+            await quizDB.clearProgress();
+            this.elements.continueBtn.style.display = 'none';
+            this.showScreen('quiz');
+            console.log('Displaying first question...');
+            this.displayQuestion();
+        } catch (error) {
+            console.error('Error starting quiz:', error);
+            alert('Failed to start quiz. Error: ' + error.message);
+        }
     }
 
     continueQuiz() {
@@ -85,6 +111,14 @@ class App {
 
     displayQuestion() {
         const question = quiz.getCurrentQuestion();
+        
+        if (!question) {
+            console.error('No question available at index:', quiz.currentQuestionIndex);
+            alert('Error loading question. Please restart the quiz.');
+            this.showScreen('home');
+            return;
+        }
+        
         const progress = quiz.getProgress();
         
         // Update progress

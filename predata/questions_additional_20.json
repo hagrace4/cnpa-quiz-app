@@ -1,0 +1,179 @@
+{
+  "exam": "Certified Cloud Native Platform Engineering Associate",
+  "short_code": "CNPA",
+  "provider": "CNCF / Linux Foundation",
+  "version": "2025-12-06",
+  "source": "Original high-quality practice questions",
+  "questions": [
+    {
+      "id": "CNPA-051",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Self-Service Capabilities",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What is the primary benefit of providing self-service infrastructure provisioning to developers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It eliminates the need for the platform team"
+        },
+        {
+          "id": "B",
+          "text": "It reduces wait times and empowers developers to move faster independently"
+        },
+        {
+          "id": "C",
+          "text": "It ensures developers become infrastructure experts"
+        },
+        {
+          "id": "D",
+          "text": "It removes all governance and security controls"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Self-service capabilities reduce bottlenecks by enabling developers to provision resources on-demand without waiting for tickets or manual approvals. This aligns with platform engineering goals of improving developer velocity while maintaining governance through automated guardrails and policies.",
+      "tags": [
+        "self-service-capabilities",
+        "platform-engineering"
+      ]
+    },
+    {
+      "id": "CNPA-052",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Service Mesh Benefits",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Which capability is uniquely provided by a service mesh that cannot be easily achieved at the application layer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Automatic code deployment"
+        },
+        {
+          "id": "B",
+          "text": "Zero-trust mTLS encryption between all services without code changes"
+        },
+        {
+          "id": "C",
+          "text": "Database query optimization"
+        },
+        {
+          "id": "D",
+          "text": "Frontend UI rendering"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Service meshes provide transparent mTLS encryption for service-to-service communication without requiring application code modifications. This zero-trust security model is a key differentiator, as implementing mTLS at the application layer would require significant code changes across all services.",
+      "tags": [
+        "service-mesh-benefits",
+        "platform-engineering"
+      ]
+    },
+    {
+      "id": "CNPA-053",
+      "domain": "Platform Security and Compliance",
+      "topic": "Policy as Code",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "How does implementing policy-as-code improve platform security and compliance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It replaces the need for security teams"
+        },
+        {
+          "id": "B",
+          "text": "It enables automated, consistent policy enforcement with version control and auditability"
+        },
+        {
+          "id": "C",
+          "text": "It automatically fixes all security vulnerabilities"
+        },
+        {
+          "id": "D",
+          "text": "It eliminates the need for security scanning"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Policy-as-code tools like OPA or Kyverno enable teams to define security and compliance policies declaratively, enforce them automatically across environments, and maintain them in version control. This provides consistency, auditability, and shift-left security without replacing human oversight or automated scanning.",
+      "tags": [
+        "policy-as-code",
+        "platform-engineering"
+      ]
+    },
+    {
+      "id": "CNPA-054",
+      "domain": "Continuous Delivery & Platform Engineering",
+      "topic": "Deployment Strategies",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Which deployment strategy minimizes risk by gradually shifting traffic to a new version while monitoring metrics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Big bang deployment"
+        },
+        {
+          "id": "B",
+          "text": "Canary deployment with progressive traffic shifting"
+        },
+        {
+          "id": "C",
+          "text": "Recreate strategy"
+        },
+        {
+          "id": "D",
+          "text": "Manual deployment with downtime"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Canary deployments gradually route a small percentage of traffic to the new version, monitor key metrics, and progressively increase traffic if metrics remain healthy. This minimizes blast radius and enables quick rollback if issues arise, making it ideal for risk mitigation in production.",
+      "tags": [
+        "deployment-strategies",
+        "platform-engineering"
+      ]
+    },
+    {
+      "id": "CNPA-055",
+      "domain": "Platform Observability",
+      "topic": "SLOs and SLIs",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What is the relationship between SLIs and SLOs in platform reliability engineering?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SLIs and SLOs are the same thing"
+        },
+        {
+          "id": "B",
+          "text": "SLIs are the metrics measured, SLOs are the target values for those metrics"
+        },
+        {
+          "id": "C",
+          "text": "SLOs measure performance, SLIs measure availability"
+        },
+        {
+          "id": "D",
+          "text": "SLIs are only for applications, SLOs are only for infrastructure"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Service Level Indicators (SLIs) are the specific metrics you measure (like latency, error rate, availability), while Service Level Objectives (SLOs) are the target values or thresholds for those SLIs (like 99.9% availability). SLOs define acceptable performance based on SLI measurements.",
+      "tags": [
+        "slos-and-slis",
+        "platform-engineering"
+      ]
+    }
+  ]
+}

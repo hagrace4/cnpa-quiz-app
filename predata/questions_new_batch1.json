@@ -1,0 +1,21 @@
+{
+  "questions": [
+    {
+      "id": "CNPA-NEW-001",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Platform Team Structure",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "A company is forming a platform engineering team. Which organizational structure best supports platform adoption across multiple product teams?",
+      "options": [
+        {"id": "A", "text": "Platform team reports to a single product team and prioritizes their needs"},
+        {"id": "B", "text": "Platform team operates as a centralized service organization with clear SLAs and feedback mechanisms"},
+        {"id": "C", "text": "Each product team builds and maintains their own platform tools independently"},
+        {"id": "D", "text": "Platform team only handles infrastructure provisioning without developer tooling"}
+      ],
+      "correct_option_ids": ["B"],
+      "explanation": "A centralized platform team that operates as a service organization with clear SLAs and feedback mechanisms ensures consistent platform capabilities across all product teams while maintaining accountability and continuous improvement.",
+      "tags": ["platform-team", "organization", "structure"]
+    }
+  ]
+}

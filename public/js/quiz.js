@@ -1,25 +1,46 @@
 // Quiz logic and state management
 class Quiz {
     constructor() {
-        this.questions = [];
+        this.allQuestions = [];  // Full question bank
+        this.questions = [];      // Selected questions for current quiz
         this.currentQuestionIndex = 0;
         this.answers = [];
         this.score = 0;
+        this.quizSize = 50;      // Number of questions per quiz
     }
 
     async loadQuestions() {
         try {
             const response = await fetch('/data/questions.json');
             const data = await response.json();
-            this.questions = data.questions;
-            return this.questions;
+            this.allQuestions = data.questions;
+            return this.allQuestions;
         } catch (error) {
             console.error('Error loading questions:', error);
             throw error;
         }
     }
 
+    selectRandomQuestions() {
+        // Shuffle all questions
+        const shuffled = [...this.allQuestions];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        
+        // Select first N questions (or all if less than quizSize)
+        const count = Math.min(this.quizSize, shuffled.length);
+        this.questions = shuffled.slice(0, count);
+        console.log(`Selected ${this.questions.length} questions from ${this.allQuestions.length} available`);
+    }
+
+    getTotalQuestionsAvailable() {
+        return this.allQuestions.length;
+    }
+
     shuffleQuestions() {
+        // This method is kept for compatibility but now just shuffles selected questions
         for (let i = this.questions.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [this.questions[i], this.questions[j]] = [this.questions[j], this.questions[i]];

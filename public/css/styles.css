@@ -85,6 +85,12 @@ main {
     color: var(--primary-color);
 }
 
+.info-text {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
 .stats {
     display: flex;
     gap: 2rem;

@@ -4,12 +4,13 @@ A Progressive Web App (PWA) for practicing CNCF Certified Cloud Native Platform 
 
 ## Features
 
-- ✅ 50 practice questions covering CNPA exam topics
+- ✅ 104 practice questions covering CNPA exam topics
+- 🎲 Random selection of 50 questions per quiz attempt
 - 📱 Offline support via Service Worker
 - 💾 Progress tracking with IndexedDB
 - 🎨 Responsive design for mobile and desktop
-- 📖 Question explanations and difficulty levels
-- 🔄 Shuffle questions for varied practice
+- 📖 Comprehensive question explanations (150-200 words)
+- 🏷️ Difficulty levels: Easy, Medium, Hard
 - 📊 Score tracking and results summary
 
 ## Quick Start
@@ -62,7 +63,8 @@ http://localhost:8000
 ## Usage
 
 ### Starting a Quiz
-- Click **"Start Quiz"** to begin with shuffled questions
+- Click **"Start Quiz"** to begin with 50 randomly selected questions from the 104-question bank
+- Each quiz attempt will have different questions
 - Click **"Continue Quiz"** to resume from where you left off
 
 ### Answering Questions
@@ -128,14 +130,17 @@ cnpa-quiz-app/
 │   │   ├── db.js            # IndexedDB wrapper
 │   │   └── sw-register.js   # Service worker registration
 │   ├── data/
-│   │   └── questions.json   # Quiz questions (50 questions)
+│   │   └── questions.json   # Quiz questions (104 questions)
 │   └── icons/
 │       ├── icon-192.png     # PWA icon (192x192)
 │       ├── icon-512.png     # PWA icon (512x512)
 │       └── icon.svg         # Source SVG icon
 ├── predata/                  # Raw question data sources
-│   ├── questions.json       # Original Python format
-│   └── questions_gpt.json   # GPT-generated questions
+│   ├── questions.json       # Original 30 questions
+│   ├── questions_gpt.json   # 20 GPT-generated questions
+│   ├── questions_additional_20.json      # 5 LF-style questions
+│   ├── questions_comprehensive_45.json   # 29 comprehensive questions
+│   └── questions_final_20.json           # 20 final questions
 ├── scripts/
 │   └── convert_questions.py # Data conversion script
 └── README.md                # This file

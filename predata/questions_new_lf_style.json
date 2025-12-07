@@ -1,0 +1,184 @@
+{
+  "exam": "Certified Cloud Native Platform Engineering Associate",
+  "short_code": "CNPA",
+  "provider": "CNCF / Linux Foundation",
+  "version": "2025-12-06",
+  "source": "Original practice questions - high quality set",
+  "questions": [
+    {
+      "id": "CNPA-051",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Platform as a Product",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "How should a platform team measure the success of their internal developer platform?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By tracking the number of features shipped by the platform team"
+        },
+        {
+          "id": "B",
+          "text": "By measuring developer satisfaction, adoption rates, and time-to-production for product teams"
+        },
+        {
+          "id": "C",
+          "text": "By counting the total number of infrastructure resources provisioned"
+        },
+        {
+          "id": "D",
+          "text": "By monitoring only the platform's uptime and availability"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Treating the platform as a product means measuring success through user-centric metrics. Developer satisfaction surveys, platform adoption rates, and improvements in time-to-production directly indicate whether the platform is delivering value to its users (the development teams). These metrics align with the platform-as-a-product mindset emphasized in CNCF guidance.",
+      "tags": [
+        "platform-as-product",
+        "metrics",
+        "developer-experience"
+      ]
+    },
+    {
+      "id": "CNPA-052",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "API Gateway Patterns",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "In a cloud native platform serving multiple product teams, which API gateway pattern best supports team autonomy while maintaining centralized governance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Single monolithic gateway managed entirely by the platform team"
+        },
+        {
+          "id": "B",
+          "text": "Decentralized gateways where each team manages their own without any standards"
+        },
+        {
+          "id": "C",
+          "text": "Federated gateway pattern with centralized policies and team-owned route configurations"
+        },
+        {
+          "id": "D",
+          "text": "No API gateway, relying solely on service mesh for all traffic management"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation": "The federated gateway pattern strikes the optimal balance between team autonomy and platform governance. It allows the platform team to enforce centralized policies (security, rate limiting, observability) while enabling product teams to own and configure their specific routes and API definitions.",
+      "tags": [
+        "api-gateway",
+        "federation",
+        "team-autonomy"
+      ]
+    },
+    {
+      "id": "CNPA-053",
+      "domain": "Platform Security and Compliance",
+      "topic": "Supply Chain Security",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Which practice is most critical for securing the software supply chain in a platform engineering context?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Manually reviewing all third-party dependencies before use"
+        },
+        {
+          "id": "B",
+          "text": "Integrating automated SBOM generation and vulnerability scanning into CI/CD pipelines"
+        },
+        {
+          "id": "C",
+          "text": "Restricting all developers from using external libraries"
+        },
+        {
+          "id": "D",
+          "text": "Performing security audits only before major releases"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Automated SBOM generation and vulnerability scanning integrated into CI/CD pipelines enable early detection of supply chain risks while maintaining development velocity. This shift-left security approach aligns with CNCF supply chain security best practices, ensuring continuous monitoring without manual bottlenecks.",
+      "tags": [
+        "supply-chain",
+        "sbom",
+        "security"
+      ]
+    },
+    {
+      "id": "CNPA-054",
+      "domain": "Continuous Delivery & Platform Engineering",
+      "topic": "GitOps Workflows",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is the primary advantage of using GitOps for platform configuration management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It eliminates the need for any manual interventions"
+        },
+        {
+          "id": "B",
+          "text": "Git becomes the single source of truth with automated reconciliation and audit trails"
+        },
+        {
+          "id": "C",
+          "text": "It automatically fixes all configuration errors"
+        },
+        {
+          "id": "D",
+          "text": "It replaces the need for CI/CD pipelines"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "GitOps establishes Git as the single source of truth for desired state, with automated agents continuously reconciling actual state to match. This provides versioning, auditability, and declarative management. GitOps complements CI/CD rather than replacing it, and while it reduces manual work, some interventions may still be needed.",
+      "tags": [
+        "gitops",
+        "declarative",
+        "automation"
+      ]
+    },
+    {
+      "id": "CNPA-055",
+      "domain": "Platform Observability",
+      "topic": "Distributed Tracing",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "In a microservices architecture, why is distributed tracing essential for platform observability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It replaces the need for logging and metrics"
+        },
+        {
+          "id": "B",
+          "text": "It tracks request flows across service boundaries to identify latency and failures"
+        },
+        {
+          "id": "C",
+          "text": "It automatically fixes performance issues"
+        },
+        {
+          "id": "D",
+          "text": "It only works for synchronous HTTP requests"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Distributed tracing provides end-to-end visibility of requests as they traverse multiple services, enabling teams to identify bottlenecks, latency issues, and failure points. It complements logs and metrics as part of comprehensive observability, working with both synchronous and asynchronous communication patterns.",
+      "tags": [
+        "distributed-tracing",
+        "observability",
+        "microservices"
+      ]
+    }
+  ]
+}

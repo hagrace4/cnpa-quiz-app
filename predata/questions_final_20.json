@@ -1,0 +1,689 @@
+{
+  "exam": "Certified Cloud Native Platform Engineering Associate",
+  "short_code": "CNPA",
+  "provider": "CNCF / Linux Foundation",
+  "version": "2025-12-06",
+  "source": "Final comprehensive question set",
+  "questions": [
+    {
+      "id": "CNPA-085",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Developer Portal",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is the primary purpose of a developer portal like Backstage in a platform?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To replace all other platform tools"
+        },
+        {
+          "id": "B",
+          "text": "To provide a unified interface for service discovery, documentation, and self-service actions"
+        },
+        {
+          "id": "C",
+          "text": "To monitor infrastructure only"
+        },
+        {
+          "id": "D",
+          "text": "To write application code"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Developer portals like Backstage provide a single pane of glass for developers to discover services, access documentation, view ownership, trigger deployments, and perform self-service actions. They aggregate information from multiple sources (Git, CI/CD, monitoring) and provide a consistent UX. This reduces context switching and cognitive load, making the platform more accessible and discoverable.",
+      "tags": [
+        "developer-portal",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-086",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Stateful Workloads",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What makes managing stateful workloads in Kubernetes more complex than stateless workloads?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Stateful workloads are always slower"
+        },
+        {
+          "id": "B",
+          "text": "Stateful workloads require persistent storage, stable network identities, and careful orchestration of startup/shutdown"
+        },
+        {
+          "id": "C",
+          "text": "Stateful workloads cannot run in Kubernetes"
+        },
+        {
+          "id": "D",
+          "text": "Stateful workloads don't need any special handling"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Stateful workloads (databases, message queues) require: persistent volumes that survive pod restarts, stable network identities (StatefulSets provide this), ordered deployment and scaling, and careful handling of data during updates. They also need backup/restore strategies and often require operators for complex lifecycle management. This contrasts with stateless workloads where any pod is interchangeable.",
+      "tags": [
+        "stateful-workloads",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-087",
+      "domain": "Platform Security and Compliance",
+      "topic": "Zero Trust Networking",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What is the core principle of zero trust networking in cloud native platforms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Trust all internal network traffic by default"
+        },
+        {
+          "id": "B",
+          "text": "Never trust, always verify - authenticate and authorize every request regardless of source"
+        },
+        {
+          "id": "C",
+          "text": "Only use firewalls for security"
+        },
+        {
+          "id": "D",
+          "text": "Disable all security to improve performance"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Zero trust assumes breach and requires verification for every request, regardless of whether it originates inside or outside the network perimeter. Implementation includes: mTLS for service-to-service communication, strong authentication, fine-grained authorization, network segmentation, and continuous monitoring. Service meshes help implement zero trust by providing transparent mTLS and policy enforcement.",
+      "tags": [
+        "zero-trust-networking",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-088",
+      "domain": "Continuous Delivery & Platform Engineering",
+      "topic": "Rollback Strategies",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is the fastest way to rollback a problematic deployment in a GitOps workflow?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Manually edit cluster resources"
+        },
+        {
+          "id": "B",
+          "text": "Revert the Git commit and let GitOps reconcile"
+        },
+        {
+          "id": "C",
+          "text": "Delete all pods"
+        },
+        {
+          "id": "D",
+          "text": "Wait for the next deployment"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "In GitOps, reverting the problematic Git commit and pushing the revert triggers automatic reconciliation back to the previous good state. This is fast, auditable, and consistent with the GitOps model where Git is the source of truth. Manual cluster edits would be overwritten by GitOps reconciliation. Some GitOps tools also support quick rollback commands that automate the Git revert process.",
+      "tags": [
+        "rollback-strategies",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-089",
+      "domain": "Platform Observability",
+      "topic": "Cardinality Explosion",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What is cardinality explosion in metrics, and why is it problematic?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Too many metrics with high-cardinality labels causing storage and query performance issues"
+        },
+        {
+          "id": "B",
+          "text": "Not having enough metrics"
+        },
+        {
+          "id": "C",
+          "text": "Metrics that are too accurate"
+        },
+        {
+          "id": "D",
+          "text": "A beneficial feature of all monitoring systems"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation": "Cardinality explosion occurs when metrics have labels with many unique values (like user IDs, request IDs), creating millions of time series. This overwhelms storage and makes queries slow. Best practices include: using low-cardinality labels (environment, service, not user ID), aggregating before storing, and using logs/traces for high-cardinality data. Prometheus and similar systems are optimized for moderate cardinality.",
+      "tags": [
+        "cardinality-explosion",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-090",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Platform Maturity Model",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "According to platform maturity models, what characterizes a mature platform?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Having the most features"
+        },
+        {
+          "id": "B",
+          "text": "Self-service capabilities, automation, clear SLOs, and strong adoption with positive feedback"
+        },
+        {
+          "id": "C",
+          "text": "The largest platform team"
+        },
+        {
+          "id": "D",
+          "text": "Using the newest technologies"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Platform maturity is measured by: degree of self-service, automation level, clear SLOs and metrics, adoption rates, user satisfaction, and business impact. Mature platforms have well-documented golden paths, automated provisioning, comprehensive observability, and strong feedback loops. Technology choices and team size are less important than actual value delivery and user experience.",
+      "tags": [
+        "platform-maturity-model",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-091",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Backup and Disaster Recovery",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What is the recommended approach for disaster recovery in cloud native platforms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "No backups needed - just redeploy everything"
+        },
+        {
+          "id": "B",
+          "text": "GitOps for configuration, automated backups for stateful data, and regular DR testing"
+        },
+        {
+          "id": "C",
+          "text": "Manual backups once per year"
+        },
+        {
+          "id": "D",
+          "text": "Only backup production, ignore other environments"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Comprehensive DR includes: GitOps for infrastructure and application configuration (enabling recreation), automated backups of stateful data (databases, volumes), backup of cluster state, documented recovery procedures, and regular DR drills. RTO and RPO should be defined based on business requirements. Tools like Velero handle Kubernetes resource and volume backups. DR testing validates that recovery procedures actually work.",
+      "tags": [
+        "backup-and-disaster-recovery",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-092",
+      "domain": "Platform Security and Compliance",
+      "topic": "Compliance as Code",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "How does compliance-as-code improve security posture?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It eliminates the need for compliance teams"
+        },
+        {
+          "id": "B",
+          "text": "It automates compliance checks, makes them repeatable, and enables continuous compliance validation"
+        },
+        {
+          "id": "C",
+          "text": "It makes systems less secure"
+        },
+        {
+          "id": "D",
+          "text": "It only works for financial services"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Compliance-as-code (using tools like OPA, Checkov, or cloud-specific tools) defines compliance requirements as code that can be automatically validated. This enables: shift-left compliance checking in CI/CD, continuous validation in production, consistent enforcement across environments, and audit trails. It doesn't replace compliance teams but makes their work more efficient and effective.",
+      "tags": [
+        "compliance-as-code",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-093",
+      "domain": "Continuous Delivery & Platform Engineering",
+      "topic": "Trunk-Based Development",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "How does trunk-based development support continuous delivery?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It requires long-lived feature branches"
+        },
+        {
+          "id": "B",
+          "text": "It encourages frequent integration to main branch with feature flags, reducing merge conflicts and enabling faster delivery"
+        },
+        {
+          "id": "C",
+          "text": "It prevents any code from being merged"
+        },
+        {
+          "id": "D",
+          "text": "It only works for small teams"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Trunk-based development has developers commit frequently to the main branch (trunk), using feature flags to hide incomplete features. This reduces merge conflicts, enables continuous integration, and supports rapid delivery. Combined with automated testing and feature flags, it allows deploying to production frequently while controlling feature releases independently.",
+      "tags": [
+        "trunk-based-development",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-094",
+      "domain": "Platform Observability",
+      "topic": "Alerting Best Practices",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What makes a good alert in a production system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Alerts for every log message"
+        },
+        {
+          "id": "B",
+          "text": "Actionable, indicating a real problem requiring human intervention, with clear runbooks"
+        },
+        {
+          "id": "C",
+          "text": "Alerts that fire constantly to keep teams aware"
+        },
+        {
+          "id": "D",
+          "text": "Alerts with no context or documentation"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Good alerts are: actionable (require human intervention), indicate real user impact, have clear severity levels, include context and links to dashboards, and have associated runbooks. They should not fire for self-healing issues or non-urgent problems. The goal is high signal-to-noise ratio. Each alert should answer: what's wrong, why it matters, and what to do about it.",
+      "tags": [
+        "alerting-best-practices",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-095",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Platform Team Size",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What is the typical recommended ratio of platform engineers to application developers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1:1 - equal numbers"
+        },
+        {
+          "id": "B",
+          "text": "1:50 to 1:100 depending on platform maturity and automation"
+        },
+        {
+          "id": "C",
+          "text": "100:1 - many platform engineers per developer"
+        },
+        {
+          "id": "D",
+          "text": "Platform teams should have only one person"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Effective platform teams typically support 50-100 developers per platform engineer, though this varies based on platform maturity, automation level, and complexity. Higher ratios are possible with mature, well-automated platforms. The goal is force multiplication - platform engineers enable many developers to be more productive. Team size should be based on platform scope and user needs, not arbitrary ratios.",
+      "tags": [
+        "platform-team-size",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-096",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "API Versioning",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Why is API versioning important for platform APIs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It's not important - APIs should never change"
+        },
+        {
+          "id": "B",
+          "text": "It allows backward-compatible evolution while supporting existing users during transitions"
+        },
+        {
+          "id": "C",
+          "text": "It makes APIs more complex for no benefit"
+        },
+        {
+          "id": "D",
+          "text": "It's only needed for public APIs"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "API versioning enables platform evolution without breaking existing users. Strategies include: URL versioning (/v1/, /v2/), header-based versioning, or content negotiation. Platforms should maintain multiple versions during transition periods, clearly communicate deprecation timelines, and provide migration guides. This balances innovation with stability, treating internal APIs with the same care as external ones.",
+      "tags": [
+        "api-versioning",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-097",
+      "domain": "Platform Security and Compliance",
+      "topic": "Security Scanning Frequency",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "How often should container images be scanned for vulnerabilities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Once when first built, never again"
+        },
+        {
+          "id": "B",
+          "text": "Continuously - at build time, before deployment, and regularly in registries"
+        },
+        {
+          "id": "C",
+          "text": "Only when security incidents occur"
+        },
+        {
+          "id": "D",
+          "text": "Scanning is unnecessary overhead"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Continuous scanning is essential because new vulnerabilities are discovered daily. Scan at: build time (CI/CD), admission time (prevent vulnerable deployments), and continuously in registries (detect newly discovered CVEs in existing images). This multi-stage approach catches vulnerabilities at different lifecycle points. Automated remediation workflows should trigger rebuilds when critical CVEs are found.",
+      "tags": [
+        "security-scanning-frequency",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-098",
+      "domain": "Continuous Delivery & Platform Engineering",
+      "topic": "Environment Parity",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "Why is maintaining parity between development, staging, and production environments important?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It's not important - environments should be completely different"
+        },
+        {
+          "id": "B",
+          "text": "It reduces 'works on my machine' issues and increases confidence in deployments"
+        },
+        {
+          "id": "C",
+          "text": "It wastes resources by duplicating everything"
+        },
+        {
+          "id": "D",
+          "text": "It only matters for large companies"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Environment parity reduces surprises by ensuring code tested in staging behaves the same in production. Differences in configuration, dependencies, or infrastructure cause bugs that only appear in production. While perfect parity is expensive, key aspects should match: software versions, configuration management approach, and infrastructure patterns. Containers and IaC help maintain parity efficiently.",
+      "tags": [
+        "environment-parity",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-099",
+      "domain": "Platform Observability",
+      "topic": "Logging Levels",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What is the purpose of different logging levels (DEBUG, INFO, WARN, ERROR)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To make logs more colorful"
+        },
+        {
+          "id": "B",
+          "text": "To categorize log importance and enable filtering based on severity"
+        },
+        {
+          "id": "C",
+          "text": "To slow down applications"
+        },
+        {
+          "id": "D",
+          "text": "Logging levels are unnecessary"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Logging levels enable filtering logs by severity: DEBUG for detailed troubleshooting, INFO for normal operations, WARN for potential issues, ERROR for failures. This allows adjusting verbosity without code changes - production typically uses INFO or WARN, while debugging uses DEBUG. Proper level usage prevents log spam while ensuring important events are captured. Structured logging enhances this with additional context fields.",
+      "tags": [
+        "logging-levels",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-100",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Platform Feedback Loops",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "How should platform teams gather and act on user feedback?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ignore feedback and build what the platform team wants"
+        },
+        {
+          "id": "B",
+          "text": "Regular surveys, office hours, feedback channels, and transparent roadmap updates"
+        },
+        {
+          "id": "C",
+          "text": "Only talk to executives, not actual developers"
+        },
+        {
+          "id": "D",
+          "text": "Gather feedback but never act on it"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Effective feedback loops include: regular user surveys (NPS, satisfaction), office hours for direct interaction, dedicated Slack channels, feature request tracking, usage analytics, and transparent roadmap communication. Feedback should influence prioritization decisions. Closing the loop by communicating what was built based on feedback builds trust and engagement. This product management approach treats developers as valued customers.",
+      "tags": [
+        "platform-feedback-loops",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-101",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Resource Quotas",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is the purpose of Kubernetes ResourceQuotas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To make applications slower"
+        },
+        {
+          "id": "B",
+          "text": "To limit resource consumption per namespace, preventing resource exhaustion and enabling fair sharing"
+        },
+        {
+          "id": "C",
+          "text": "To eliminate the need for resource requests/limits"
+        },
+        {
+          "id": "D",
+          "text": "ResourceQuotas are deprecated and shouldn't be used"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "ResourceQuotas limit total resource consumption (CPU, memory, storage, object counts) per namespace, preventing any single team from consuming all cluster resources. They enable fair sharing in multi-tenant clusters and prevent accidental resource exhaustion. Quotas work with LimitRanges (per-pod limits) to provide comprehensive resource governance. This is essential for cluster stability and cost control.",
+      "tags": [
+        "resource-quotas",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-102",
+      "domain": "Platform Security and Compliance",
+      "topic": "Audit Logging",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "Why is Kubernetes audit logging important for security and compliance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It's not important - audit logs waste storage"
+        },
+        {
+          "id": "B",
+          "text": "It provides a record of all API requests for security investigation, compliance, and troubleshooting"
+        },
+        {
+          "id": "C",
+          "text": "It replaces the need for RBAC"
+        },
+        {
+          "id": "D",
+          "text": "It only logs successful requests"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Kubernetes audit logs record all API server requests (who, what, when, result), providing: security incident investigation capabilities, compliance evidence, troubleshooting data, and detection of unauthorized access attempts. Audit policies control what's logged to balance detail with storage costs. Logs should be sent to secure, immutable storage. This is critical for meeting compliance requirements and security forensics.",
+      "tags": [
+        "audit-logging",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-103",
+      "domain": "Continuous Delivery & Platform Engineering",
+      "topic": "Deployment Frequency",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "According to DORA metrics, why is deployment frequency important?",
+      "options": [
+        {
+          "id": "A",
+          "text": "More deployments always mean more bugs"
+        },
+        {
+          "id": "B",
+          "text": "High deployment frequency indicates ability to deliver value quickly and respond to changes"
+        },
+        {
+          "id": "C",
+          "text": "Deployment frequency doesn't matter"
+        },
+        {
+          "id": "D",
+          "text": "Low deployment frequency is always better"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Deployment frequency is a key DORA metric indicating organizational agility. High-performing teams deploy multiple times per day, enabled by: automated testing, CI/CD pipelines, small batch sizes, and confidence in rollback capabilities. Frequent deployments reduce risk (smaller changes), enable faster feedback, and allow rapid response to issues or opportunities. It's a leading indicator of software delivery performance.",
+      "tags": [
+        "deployment-frequency",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-104",
+      "domain": "Platform Observability",
+      "topic": "Synthetic Monitoring",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is synthetic monitoring and when is it useful?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fake monitoring that doesn't work"
+        },
+        {
+          "id": "B",
+          "text": "Proactive monitoring using scripted transactions to test system availability and performance from user perspective"
+        },
+        {
+          "id": "C",
+          "text": "Only monitoring synthetic materials"
+        },
+        {
+          "id": "D",
+          "text": "Monitoring that replaces all other observability"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Synthetic monitoring uses automated scripts to simulate user interactions, testing system availability and performance proactively. It's useful for: detecting issues before users do, monitoring from multiple geographic locations, testing critical user journeys, and establishing baseline performance. It complements real user monitoring (RUM) by providing consistent, predictable test traffic. Common tools include Pingdom, Datadog Synthetics, or custom scripts.",
+      "tags": [
+        "synthetic-monitoring",
+        "cnpa"
+      ]
+    }
+  ]
+}

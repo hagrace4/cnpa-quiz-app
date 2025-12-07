@@ -3,7 +3,7 @@
   "short_code": "CNPA",
   "provider": "CNCF / Linux Foundation",
   "version": "2025-12-06",
-  "source": "Unofficial practice questions - merged from multiple sources",
+  "source": "Comprehensive practice questions - merged from multiple sources",
   "questions": [
     {
       "id": "CNPA-001",
@@ -1118,7 +1118,7 @@
       "correct_option_ids": [
         "C"
       ],
-      "explanation": "Platform engineering emphasizes \"platform as a product\": you identify developer personas, clarify the platform’s value, maintain a roadmap, and use feedback and metrics to drive continuous improvement.",
+      "explanation": "Platform engineering emphasizes \"platform as a product\": you identify developer personas, clarify the platform\u2019s value, maintain a roadmap, and use feedback and metrics to drive continuous improvement.",
       "tags": [
         "platform-as-a-product",
         "idp",
@@ -1489,19 +1489,19 @@
       "options": [
         {
           "id": "A",
-          "text": "Clone repo → run tests → build container image → push image → publish test reports."
+          "text": "Clone repo \u2192 run tests \u2192 build container image \u2192 push image \u2192 publish test reports."
         },
         {
           "id": "B",
-          "text": "Manually edit production manifests → deploy to production → run tests → push code to Git."
+          "text": "Manually edit production manifests \u2192 deploy to production \u2192 run tests \u2192 push code to Git."
         },
         {
           "id": "C",
-          "text": "Build container image → modify code directly in the cluster → commit changes later."
+          "text": "Build container image \u2192 modify code directly in the cluster \u2192 commit changes later."
         },
         {
           "id": "D",
-          "text": "Run performance tests only → deploy directly to production."
+          "text": "Run performance tests only \u2192 deploy directly to production."
         }
       ],
       "correct_option_ids": [
@@ -1759,6 +1759,1842 @@
         "dora",
         "metrics",
         "delivery-performance"
+      ]
+    },
+    {
+      "id": "CNPA-051",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Self-Service Capabilities",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What is the primary benefit of providing self-service infrastructure provisioning to developers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It eliminates the need for the platform team"
+        },
+        {
+          "id": "B",
+          "text": "It reduces wait times and empowers developers to move faster independently"
+        },
+        {
+          "id": "C",
+          "text": "It ensures developers become infrastructure experts"
+        },
+        {
+          "id": "D",
+          "text": "It removes all governance and security controls"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Self-service capabilities reduce bottlenecks by enabling developers to provision resources on-demand without waiting for tickets or manual approvals. This aligns with platform engineering goals of improving developer velocity while maintaining governance through automated guardrails and policies.",
+      "tags": [
+        "self-service-capabilities",
+        "platform-engineering"
+      ]
+    },
+    {
+      "id": "CNPA-052",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Service Mesh Benefits",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Which capability is uniquely provided by a service mesh that cannot be easily achieved at the application layer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Automatic code deployment"
+        },
+        {
+          "id": "B",
+          "text": "Zero-trust mTLS encryption between all services without code changes"
+        },
+        {
+          "id": "C",
+          "text": "Database query optimization"
+        },
+        {
+          "id": "D",
+          "text": "Frontend UI rendering"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Service meshes provide transparent mTLS encryption for service-to-service communication without requiring application code modifications. This zero-trust security model is a key differentiator, as implementing mTLS at the application layer would require significant code changes across all services.",
+      "tags": [
+        "service-mesh-benefits",
+        "platform-engineering"
+      ]
+    },
+    {
+      "id": "CNPA-053",
+      "domain": "Platform Security and Compliance",
+      "topic": "Policy as Code",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "How does implementing policy-as-code improve platform security and compliance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It replaces the need for security teams"
+        },
+        {
+          "id": "B",
+          "text": "It enables automated, consistent policy enforcement with version control and auditability"
+        },
+        {
+          "id": "C",
+          "text": "It automatically fixes all security vulnerabilities"
+        },
+        {
+          "id": "D",
+          "text": "It eliminates the need for security scanning"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Policy-as-code tools like OPA or Kyverno enable teams to define security and compliance policies declaratively, enforce them automatically across environments, and maintain them in version control. This provides consistency, auditability, and shift-left security without replacing human oversight or automated scanning.",
+      "tags": [
+        "policy-as-code",
+        "platform-engineering"
+      ]
+    },
+    {
+      "id": "CNPA-054",
+      "domain": "Continuous Delivery & Platform Engineering",
+      "topic": "Deployment Strategies",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Which deployment strategy minimizes risk by gradually shifting traffic to a new version while monitoring metrics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Big bang deployment"
+        },
+        {
+          "id": "B",
+          "text": "Canary deployment with progressive traffic shifting"
+        },
+        {
+          "id": "C",
+          "text": "Recreate strategy"
+        },
+        {
+          "id": "D",
+          "text": "Manual deployment with downtime"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Canary deployments gradually route a small percentage of traffic to the new version, monitor key metrics, and progressively increase traffic if metrics remain healthy. This minimizes blast radius and enables quick rollback if issues arise, making it ideal for risk mitigation in production.",
+      "tags": [
+        "deployment-strategies",
+        "platform-engineering"
+      ]
+    },
+    {
+      "id": "CNPA-055",
+      "domain": "Platform Observability",
+      "topic": "SLOs and SLIs",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What is the relationship between SLIs and SLOs in platform reliability engineering?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SLIs and SLOs are the same thing"
+        },
+        {
+          "id": "B",
+          "text": "SLIs are the metrics measured, SLOs are the target values for those metrics"
+        },
+        {
+          "id": "C",
+          "text": "SLOs measure performance, SLIs measure availability"
+        },
+        {
+          "id": "D",
+          "text": "SLIs are only for applications, SLOs are only for infrastructure"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Service Level Indicators (SLIs) are the specific metrics you measure (like latency, error rate, availability), while Service Level Objectives (SLOs) are the target values or thresholds for those SLIs (like 99.9% availability). SLOs define acceptable performance based on SLI measurements.",
+      "tags": [
+        "slos-and-slis",
+        "platform-engineering"
+      ]
+    },
+    {
+      "id": "CNPA-056",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Team Topologies",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "According to Team Topologies principles, what is the primary interaction mode between a platform team and stream-aligned teams?",
+      "options": [
+        {
+          "id": "A",
+          "text": "X-as-a-Service with clear APIs and self-service capabilities"
+        },
+        {
+          "id": "B",
+          "text": "Collaboration mode requiring constant joint work"
+        },
+        {
+          "id": "C",
+          "text": "Facilitating mode where platform team does the work for stream teams"
+        },
+        {
+          "id": "D",
+          "text": "No interaction - complete independence"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation": "Platform teams should operate in X-as-a-Service mode, providing well-defined APIs, documentation, and self-service capabilities that enable stream-aligned teams to consume platform services independently. This reduces cognitive load and allows both teams to focus on their core responsibilities. Collaboration mode is reserved for complex problems requiring joint expertise, while facilitating mode is temporary. Complete independence would defeat the purpose of having a platform team. This aligns with Team Topologies guidance on platform team interactions.",
+      "tags": [
+        "team-topologies",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-057",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Cognitive Load Reduction",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "How does a platform reduce cognitive load for application developers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By requiring developers to learn all infrastructure details"
+        },
+        {
+          "id": "B",
+          "text": "By providing abstractions that hide infrastructure complexity behind simple interfaces"
+        },
+        {
+          "id": "C",
+          "text": "By eliminating all documentation"
+        },
+        {
+          "id": "D",
+          "text": "By making developers responsible for all operational tasks"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Platforms reduce cognitive load by providing well-designed abstractions that hide infrastructure complexity. Developers interact with simple, high-level interfaces (APIs, portals, CLI tools) without needing to understand underlying Kubernetes, networking, or storage details. This allows them to focus on business logic and feature development. Good abstractions are documented, tested, and maintained by the platform team, following the principle of making the right thing easy while still allowing flexibility when needed.",
+      "tags": [
+        "cognitive-load-reduction",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-058",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Golden Path Implementation",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "When implementing golden paths, which approach best balances standardization with team autonomy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Enforce golden paths through technical restrictions that prevent any deviation"
+        },
+        {
+          "id": "B",
+          "text": "Make golden paths the easiest option with great documentation, but allow teams to deviate when justified"
+        },
+        {
+          "id": "C",
+          "text": "Provide no guidance and let each team choose their own approach"
+        },
+        {
+          "id": "D",
+          "text": "Require approval from platform team for any technology choice"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Effective golden paths make the recommended approach the easiest and best-documented option, naturally guiding teams toward good practices without enforcing rigid constraints. Teams should be able to deviate when they have valid reasons (special requirements, performance needs, etc.), but the golden path should be so well-supported that deviation requires conscious effort and justification. This balances standardization benefits with team autonomy, avoiding both chaos and excessive rigidity. The platform team provides the paved road but doesn't block off-road travel when necessary.",
+      "tags": [
+        "golden-path-implementation",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-059",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Platform Adoption Metrics",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Which metric best indicates successful platform adoption?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Number of platform features available"
+        },
+        {
+          "id": "B",
+          "text": "Percentage of teams actively using platform services with positive feedback"
+        },
+        {
+          "id": "C",
+          "text": "Total infrastructure cost"
+        },
+        {
+          "id": "D",
+          "text": "Number of platform team members"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Platform adoption is best measured by actual usage combined with user satisfaction. High adoption rates with positive feedback indicate the platform is delivering value and meeting developer needs. Simply having many features doesn't mean they're useful or used. Cost and team size are inputs, not outcomes. Effective adoption metrics include: percentage of teams using the platform, frequency of use, Net Promoter Score (NPS), time-to-first-deployment for new teams, and reduction in support tickets. These user-centric metrics align with treating the platform as a product.",
+      "tags": [
+        "platform-adoption-metrics",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-060",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Platform Documentation",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What type of documentation is most critical for platform adoption?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Detailed architecture diagrams of internal platform implementation"
+        },
+        {
+          "id": "B",
+          "text": "Getting started guides and common use case examples"
+        },
+        {
+          "id": "C",
+          "text": "Complete API reference without examples"
+        },
+        {
+          "id": "D",
+          "text": "Platform team meeting notes"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Getting started guides and practical examples are most critical because they help developers quickly understand how to use the platform for their actual needs. While API references are important, they're less effective without context. Internal architecture details are rarely needed by platform users. Good platform documentation follows the Di\u00e1taxis framework: tutorials for learning, how-to guides for tasks, reference for lookup, and explanation for understanding. The goal is reducing time-to-first-success for new users.",
+      "tags": [
+        "platform-documentation",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-061",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Kubernetes Operators",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What is the primary advantage of using Kubernetes Operators for platform capabilities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They eliminate the need for any manual operations"
+        },
+        {
+          "id": "B",
+          "text": "They encode operational knowledge into software that can manage complex applications automatically"
+        },
+        {
+          "id": "C",
+          "text": "They replace the need for Kubernetes entirely"
+        },
+        {
+          "id": "D",
+          "text": "They only work for stateless applications"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Kubernetes Operators extend Kubernetes with custom resources and controllers that encode domain-specific operational knowledge. They automate complex lifecycle management tasks (installation, upgrades, backups, scaling) that would otherwise require manual intervention or complex scripts. Operators are particularly valuable for stateful applications like databases. They don't eliminate all manual work or replace Kubernetes - they enhance it by making application-specific operations declarative and automated. This aligns with the Operator pattern for managing complex workloads.",
+      "tags": [
+        "kubernetes-operators",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-062",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Multi-Tenancy Strategies",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "In a shared Kubernetes cluster, which approach provides the strongest isolation between tenants?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Separate namespaces with NetworkPolicies and ResourceQuotas"
+        },
+        {
+          "id": "B",
+          "text": "No isolation - all tenants share everything"
+        },
+        {
+          "id": "C",
+          "text": "Virtual clusters or separate physical clusters per tenant"
+        },
+        {
+          "id": "D",
+          "text": "Only using RBAC without namespaces"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation": "Virtual clusters (like vCluster) or separate physical clusters provide the strongest isolation by giving each tenant their own control plane and API server. This prevents noisy neighbor issues, provides complete resource isolation, and limits blast radius of security incidents. Namespace-based isolation with NetworkPolicies and ResourceQuotas is more cost-effective but provides weaker isolation since tenants share the control plane. The choice depends on security requirements, compliance needs, and cost constraints. High-security environments often require cluster-level isolation.",
+      "tags": [
+        "multi-tenancy-strategies",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-063",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Service Mesh Selection",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "When should a platform team consider implementing a service mesh?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Immediately for any Kubernetes deployment"
+        },
+        {
+          "id": "B",
+          "text": "When service-to-service communication patterns become complex and require advanced traffic management, security, or observability"
+        },
+        {
+          "id": "C",
+          "text": "Never - service meshes are always unnecessary overhead"
+        },
+        {
+          "id": "D",
+          "text": "Only for applications with fewer than 5 services"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Service meshes add complexity and overhead, so they should be adopted when their benefits outweigh costs. Good indicators include: many microservices with complex communication patterns, need for mTLS without code changes, requirements for advanced traffic management (canary, circuit breaking), or need for detailed service-level observability. For simple architectures with few services, ingress controllers and application-level solutions may suffice. The decision should be based on actual requirements, not trends.",
+      "tags": [
+        "service-mesh-selection",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-064",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Container Registry Strategy",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is the most important security practice for container registries in a platform?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Allow anonymous public access to all images"
+        },
+        {
+          "id": "B",
+          "text": "Implement vulnerability scanning, image signing, and access controls"
+        },
+        {
+          "id": "C",
+          "text": "Store all images without any metadata"
+        },
+        {
+          "id": "D",
+          "text": "Use only public Docker Hub without any private registry"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Secure container registries require multiple layers: vulnerability scanning to detect CVEs, image signing to ensure authenticity and integrity, and RBAC to control who can push/pull images. Additional practices include: immutable tags, retention policies, audit logging, and integration with admission controllers to prevent deployment of vulnerable or unsigned images. This aligns with supply chain security best practices and prevents compromised images from reaching production.",
+      "tags": [
+        "container-registry-strategy",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-065",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Ingress vs Gateway API",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What is the primary advantage of Kubernetes Gateway API over traditional Ingress?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gateway API is simpler with fewer features"
+        },
+        {
+          "id": "B",
+          "text": "Gateway API provides role-oriented, extensible, and more expressive traffic routing"
+        },
+        {
+          "id": "C",
+          "text": "Gateway API only works with specific vendors"
+        },
+        {
+          "id": "D",
+          "text": "Gateway API eliminates the need for load balancers"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Gateway API improves on Ingress by providing: role-oriented design (separating infrastructure admin, cluster operator, and application developer concerns), better expressiveness for complex routing, built-in support for multiple protocols (HTTP, TCP, gRPC), and vendor-neutral extensibility. It's designed to handle modern use cases like header-based routing, traffic splitting, and cross-namespace routing while maintaining clear separation of concerns. This makes it more suitable for platform teams serving multiple product teams.",
+      "tags": [
+        "ingress-vs-gateway-api",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-066",
+      "domain": "Platform Security and Compliance",
+      "topic": "Admission Controllers",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "How do admission controllers enhance platform security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They replace the need for RBAC entirely"
+        },
+        {
+          "id": "B",
+          "text": "They validate and mutate resources before they're persisted, enforcing policies at admission time"
+        },
+        {
+          "id": "C",
+          "text": "They only log security events without preventing issues"
+        },
+        {
+          "id": "D",
+          "text": "They work only for pod security"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Admission controllers intercept API requests after authentication/authorization but before persistence, allowing validation and mutation of resources. They enforce policies like: requiring resource limits, adding security contexts, validating image sources, or injecting sidecars. Tools like OPA Gatekeeper, Kyverno, or custom webhooks implement policy-as-code at admission time. This shift-left approach prevents non-compliant resources from ever being created, complementing RBAC which controls who can perform actions.",
+      "tags": [
+        "admission-controllers",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-067",
+      "domain": "Platform Security and Compliance",
+      "topic": "Secret Management",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is the recommended approach for managing secrets in a cloud native platform?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Store secrets in Git repositories"
+        },
+        {
+          "id": "B",
+          "text": "Use external secret management systems (Vault, cloud KMS) with dynamic secret injection"
+        },
+        {
+          "id": "C",
+          "text": "Hard-code secrets in container images"
+        },
+        {
+          "id": "D",
+          "text": "Share secrets via email"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "External secret management systems provide: encryption at rest and in transit, access auditing, secret rotation, fine-grained access control, and dynamic secret generation. Solutions like HashiCorp Vault, AWS Secrets Manager, or Azure Key Vault integrate with Kubernetes via operators or CSI drivers to inject secrets at runtime. This is superior to Kubernetes Secrets alone (which are base64-encoded, not encrypted by default) and far better than storing secrets in Git or images. Secret rotation and audit trails are critical for compliance.",
+      "tags": [
+        "secret-management",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-068",
+      "domain": "Platform Security and Compliance",
+      "topic": "Network Policies",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is the default network behavior in Kubernetes without NetworkPolicies?",
+      "options": [
+        {
+          "id": "A",
+          "text": "All pods can communicate with all other pods"
+        },
+        {
+          "id": "B",
+          "text": "No pods can communicate with each other"
+        },
+        {
+          "id": "C",
+          "text": "Only pods in the same namespace can communicate"
+        },
+        {
+          "id": "D",
+          "text": "Communication is randomly allowed or denied"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation": "By default, Kubernetes allows all pod-to-pod communication across all namespaces - a flat network model. This is convenient for development but insecure for production. NetworkPolicies implement network segmentation by defining allowed ingress and egress traffic. Platform teams should implement default-deny policies and explicitly allow required communication. This defense-in-depth approach limits blast radius of compromised pods and enforces zero-trust networking principles.",
+      "tags": [
+        "network-policies",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-069",
+      "domain": "Platform Security and Compliance",
+      "topic": "Image Scanning Integration",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "Where should container image vulnerability scanning be integrated for maximum effectiveness?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only in production after deployment"
+        },
+        {
+          "id": "B",
+          "text": "In CI/CD pipelines, admission controllers, and runtime scanning"
+        },
+        {
+          "id": "C",
+          "text": "Never - scanning is unnecessary overhead"
+        },
+        {
+          "id": "D",
+          "text": "Only manually before major releases"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Comprehensive image security requires scanning at multiple stages: in CI/CD to catch issues early (shift-left), at admission time to prevent vulnerable images from deploying, and at runtime to detect newly discovered vulnerabilities in running containers. This defense-in-depth approach catches vulnerabilities at different lifecycle stages. Tools like Trivy, Grype, or cloud-native scanners integrate with CI/CD, admission controllers, and runtime security platforms. Continuous scanning is essential as new CVEs are discovered daily.",
+      "tags": [
+        "image-scanning-integration",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-070",
+      "domain": "Platform Security and Compliance",
+      "topic": "RBAC Best Practices",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is the principle of least privilege in Kubernetes RBAC?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Give all users cluster-admin to avoid permission issues"
+        },
+        {
+          "id": "B",
+          "text": "Grant only the minimum permissions necessary for users to perform their tasks"
+        },
+        {
+          "id": "C",
+          "text": "Use only default service accounts for everything"
+        },
+        {
+          "id": "D",
+          "text": "Disable RBAC entirely for easier management"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Least privilege means granting only the minimum permissions required for each user or service account to perform their specific tasks. This limits blast radius if credentials are compromised. Implementation includes: creating specific Roles/ClusterRoles for different personas, using RoleBindings to grant permissions per namespace, avoiding cluster-admin except for platform administrators, and regularly auditing permissions. Service accounts should also follow least privilege, with each application having its own service account with minimal permissions.",
+      "tags": [
+        "rbac-best-practices",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-071",
+      "domain": "Continuous Delivery & Platform Engineering",
+      "topic": "GitOps Reconciliation",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "In GitOps, what happens when the actual cluster state drifts from the desired state in Git?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nothing - manual intervention is required"
+        },
+        {
+          "id": "B",
+          "text": "The GitOps controller automatically reconciles the cluster to match Git"
+        },
+        {
+          "id": "C",
+          "text": "Git is updated to match the cluster"
+        },
+        {
+          "id": "D",
+          "text": "An alert is sent but no action is taken"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "GitOps controllers (like ArgoCD or Flux) continuously monitor both Git and the cluster, automatically reconciling any drift by applying changes to make the cluster match Git. This self-healing capability ensures the cluster always reflects the desired state defined in Git. Drift can occur from manual changes, failed deployments, or external factors. The reconciliation loop typically runs every few minutes. This declarative approach provides consistency, auditability, and disaster recovery capabilities.",
+      "tags": [
+        "gitops-reconciliation",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-072",
+      "domain": "Continuous Delivery & Platform Engineering",
+      "topic": "CI vs CD Separation",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Why is it beneficial to separate CI (Continuous Integration) from CD (Continuous Deployment) in platform architecture?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It's not beneficial - they should always be tightly coupled"
+        },
+        {
+          "id": "B",
+          "text": "Separation allows independent scaling, different security boundaries, and flexibility in deployment strategies"
+        },
+        {
+          "id": "C",
+          "text": "Separation is only for large enterprises"
+        },
+        {
+          "id": "D",
+          "text": "CI and CD are the same thing"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Separating CI and CD provides: different security boundaries (CI handles code, CD handles production credentials), independent scaling (build and deploy have different resource needs), flexibility in deployment strategies (one build, multiple deployments), and clearer separation of concerns. CI produces immutable artifacts, CD deploys them. This aligns with GitOps where CI pushes to artifact registries and CD pulls from Git. The separation also enables different teams to own different stages.",
+      "tags": [
+        "ci-vs-cd-separation",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-073",
+      "domain": "Continuous Delivery & Platform Engineering",
+      "topic": "Artifact Management",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is the purpose of artifact immutability in CI/CD pipelines?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To make deployments slower"
+        },
+        {
+          "id": "B",
+          "text": "To ensure the same artifact is deployed across all environments, improving consistency and traceability"
+        },
+        {
+          "id": "C",
+          "text": "To prevent any deployments"
+        },
+        {
+          "id": "D",
+          "text": "Immutability is not important"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Immutable artifacts ensure that what's tested in staging is exactly what's deployed to production, eliminating environment-specific build differences. This improves reliability and traceability. Implementation includes: building once and promoting the same artifact, using content-addressable storage (like container image digests), preventing tag overwrites, and maintaining artifact provenance. Immutability is a key principle in continuous delivery and supply chain security.",
+      "tags": [
+        "artifact-management",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-074",
+      "domain": "Continuous Delivery & Platform Engineering",
+      "topic": "Pipeline as Code",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What is the primary benefit of defining CI/CD pipelines as code?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pipelines become slower"
+        },
+        {
+          "id": "B",
+          "text": "Pipelines can be versioned, reviewed, and tested like application code"
+        },
+        {
+          "id": "C",
+          "text": "Only platform team can modify pipelines"
+        },
+        {
+          "id": "D",
+          "text": "Pipelines become more complex"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Pipeline-as-code (using tools like Tekton, GitHub Actions, GitLab CI) enables version control, code review, testing, and reuse of pipeline definitions. Changes are auditable, can be rolled back, and follow the same development practices as application code. This improves consistency, reduces manual errors, and enables self-service where teams can modify their own pipelines while following platform-provided templates and standards.",
+      "tags": [
+        "pipeline-as-code",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-075",
+      "domain": "Platform Observability",
+      "topic": "Three Pillars",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What are the three pillars of observability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "CPU, Memory, Disk"
+        },
+        {
+          "id": "B",
+          "text": "Metrics, Logs, Traces"
+        },
+        {
+          "id": "C",
+          "text": "Frontend, Backend, Database"
+        },
+        {
+          "id": "D",
+          "text": "Development, Staging, Production"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "The three pillars of observability are Metrics (numerical measurements over time), Logs (discrete event records), and Traces (request flows across services). Together they provide comprehensive visibility into system behavior. Metrics answer 'what is happening', logs answer 'why it happened', and traces answer 'where it happened'. Modern observability platforms correlate these three pillars to enable effective troubleshooting and performance optimization.",
+      "tags": [
+        "three-pillars",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-076",
+      "domain": "Platform Observability",
+      "topic": "Prometheus Architecture",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What is the primary data collection model used by Prometheus?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Push-based where applications send metrics to Prometheus"
+        },
+        {
+          "id": "B",
+          "text": "Pull-based where Prometheus scrapes metrics from targets"
+        },
+        {
+          "id": "C",
+          "text": "Log-based where Prometheus reads log files"
+        },
+        {
+          "id": "D",
+          "text": "Prometheus doesn't collect any data"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Prometheus uses a pull-based model where it scrapes metrics from HTTP endpoints exposed by applications and exporters. This provides: service discovery integration, centralized configuration, easier debugging (can manually curl endpoints), and better security (Prometheus initiates connections). Applications expose metrics at /metrics endpoints in Prometheus format. For short-lived jobs, Pushgateway provides a push option. This architecture differs from push-based systems like StatsD.",
+      "tags": [
+        "prometheus-architecture",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-077",
+      "domain": "Platform Observability",
+      "topic": "Structured Logging",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Why is structured logging preferred over unstructured logging in cloud native platforms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Structured logs are easier to read by humans"
+        },
+        {
+          "id": "B",
+          "text": "Structured logs enable efficient querying, filtering, and analysis at scale"
+        },
+        {
+          "id": "C",
+          "text": "Structured logs take less disk space"
+        },
+        {
+          "id": "D",
+          "text": "Structured logs are required by Kubernetes"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Structured logging (JSON, key-value pairs) enables efficient querying and analysis because fields are parseable and indexable. This is critical at scale where grep is insufficient. Structured logs support: filtering by specific fields, aggregation, correlation with traces, and automated alerting. While they may be less human-readable in raw form, log aggregation tools (Loki, Elasticsearch) provide excellent UIs for structured logs. This aligns with observability best practices for cloud native systems.",
+      "tags": [
+        "structured-logging",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-078",
+      "domain": "Platform Observability",
+      "topic": "Alert Fatigue",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "How can platform teams reduce alert fatigue while maintaining system reliability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Send alerts for every possible issue"
+        },
+        {
+          "id": "B",
+          "text": "Disable all alerts"
+        },
+        {
+          "id": "C",
+          "text": "Implement SLO-based alerting and alert on symptoms, not causes"
+        },
+        {
+          "id": "D",
+          "text": "Only alert during business hours"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation": "SLO-based alerting focuses on user-impacting issues rather than every component failure. Alert on symptoms (users experiencing errors) not causes (individual pod restarts). This reduces noise while ensuring critical issues are caught. Additional practices include: alert aggregation, proper severity levels, runbooks for each alert, and regular alert review. The goal is actionable alerts that indicate real problems requiring human intervention, not automated recovery scenarios.",
+      "tags": [
+        "alert-fatigue",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-079",
+      "domain": "Platform Observability",
+      "topic": "OpenTelemetry",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What problem does OpenTelemetry solve in cloud native observability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It replaces all observability tools"
+        },
+        {
+          "id": "B",
+          "text": "It provides vendor-neutral instrumentation and data collection for metrics, logs, and traces"
+        },
+        {
+          "id": "C",
+          "text": "It only works with Prometheus"
+        },
+        {
+          "id": "D",
+          "text": "It eliminates the need for any observability"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "OpenTelemetry provides vendor-neutral APIs, SDKs, and collectors for instrumenting applications and collecting telemetry data. This solves vendor lock-in by allowing applications to emit telemetry once and send it to any backend (Prometheus, Jaeger, Datadog, etc.). It unifies metrics, logs, and traces under a single standard, reducing instrumentation complexity. OpenTelemetry is a CNCF project that has become the industry standard for cloud native observability instrumentation.",
+      "tags": [
+        "opentelemetry",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-080",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Platform Evolution",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "How should a platform team approach platform evolution and feature prioritization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Build every feature requested by any team"
+        },
+        {
+          "id": "B",
+          "text": "Use product management practices: gather feedback, prioritize based on impact, and maintain a roadmap"
+        },
+        {
+          "id": "C",
+          "text": "Only build features the platform team finds interesting"
+        },
+        {
+          "id": "D",
+          "text": "Never add new features to maintain stability"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Platform teams should use product management practices: regularly gather user feedback through surveys and interviews, maintain a public roadmap, prioritize features based on impact and effort, and communicate decisions transparently. This treats internal developers as customers and ensures the platform evolves to meet actual needs. Feature requests should be evaluated against platform strategy and resource constraints. Regular retrospectives and metrics help validate that new features deliver expected value.",
+      "tags": [
+        "platform-evolution",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-081",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Cluster Lifecycle Management",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What is the recommended approach for managing Kubernetes cluster lifecycle at scale?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Manually create and configure each cluster"
+        },
+        {
+          "id": "B",
+          "text": "Use cluster API or managed Kubernetes services with infrastructure-as-code"
+        },
+        {
+          "id": "C",
+          "text": "Never upgrade clusters to avoid risk"
+        },
+        {
+          "id": "D",
+          "text": "Use different configurations for each cluster"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Cluster API provides declarative, Kubernetes-style APIs for cluster lifecycle management, enabling consistent cluster provisioning, upgrades, and scaling. Alternatively, managed Kubernetes services (EKS, GKE, AKS) handle control plane management. Both should be combined with IaC (Terraform, Pulumi) for reproducibility. This approach enables: consistent cluster configuration, automated upgrades, disaster recovery, and multi-cluster management. Manual cluster management doesn't scale and increases configuration drift.",
+      "tags": [
+        "cluster-lifecycle-management",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-082",
+      "domain": "Platform Security and Compliance",
+      "topic": "Runtime Security",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What is the purpose of runtime security tools in a cloud native platform?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They replace the need for image scanning"
+        },
+        {
+          "id": "B",
+          "text": "They detect and prevent malicious behavior in running containers based on behavioral analysis"
+        },
+        {
+          "id": "C",
+          "text": "They only work during development"
+        },
+        {
+          "id": "D",
+          "text": "They eliminate all security vulnerabilities"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Runtime security tools (like Falco, Sysdig) monitor container behavior at runtime, detecting anomalies like: unexpected process execution, suspicious network connections, file system modifications, or privilege escalation attempts. This complements image scanning by catching zero-day exploits, misconfigurations, and attacks that occur after deployment. Runtime security provides defense-in-depth by monitoring actual behavior rather than just static analysis. It's essential for detecting compromised containers and insider threats.",
+      "tags": [
+        "runtime-security",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-083",
+      "domain": "Continuous Delivery & Platform Engineering",
+      "topic": "Feature Flags",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "How do feature flags support continuous delivery in platform engineering?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They slow down deployments"
+        },
+        {
+          "id": "B",
+          "text": "They enable deploying code to production while controlling feature visibility, supporting progressive rollout and quick rollback"
+        },
+        {
+          "id": "C",
+          "text": "They replace the need for testing"
+        },
+        {
+          "id": "D",
+          "text": "They only work for frontend applications"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Feature flags decouple deployment from release, allowing code to be deployed to production with features disabled, then gradually enabled for specific users or percentages of traffic. This enables: testing in production, progressive rollout, A/B testing, quick rollback without redeployment, and trunk-based development. Feature flags are valuable for both frontend and backend services. They should be managed through dedicated systems (LaunchDarkly, Unleash) with proper lifecycle management to avoid technical debt.",
+      "tags": [
+        "feature-flags",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-084",
+      "domain": "Platform Observability",
+      "topic": "Cost Observability",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Why is cost observability important in cloud native platforms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It's not important - cost doesn't matter"
+        },
+        {
+          "id": "B",
+          "text": "It enables teams to understand resource consumption, optimize spending, and make informed decisions about resource allocation"
+        },
+        {
+          "id": "C",
+          "text": "It only matters for finance teams"
+        },
+        {
+          "id": "D",
+          "text": "It replaces the need for technical observability"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Cost observability provides visibility into cloud spending at granular levels (per team, service, or feature), enabling: showback/chargeback, identification of cost optimization opportunities, capacity planning, and budget alerts. Tools like Kubecost, OpenCost, or cloud provider cost management integrate with Kubernetes to attribute costs to specific workloads. This is critical as cloud costs can spiral without visibility. Cost observability complements technical observability and supports FinOps practices.",
+      "tags": [
+        "cost-observability",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-085",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Developer Portal",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is the primary purpose of a developer portal like Backstage in a platform?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To replace all other platform tools"
+        },
+        {
+          "id": "B",
+          "text": "To provide a unified interface for service discovery, documentation, and self-service actions"
+        },
+        {
+          "id": "C",
+          "text": "To monitor infrastructure only"
+        },
+        {
+          "id": "D",
+          "text": "To write application code"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Developer portals like Backstage provide a single pane of glass for developers to discover services, access documentation, view ownership, trigger deployments, and perform self-service actions. They aggregate information from multiple sources (Git, CI/CD, monitoring) and provide a consistent UX. This reduces context switching and cognitive load, making the platform more accessible and discoverable.",
+      "tags": [
+        "developer-portal",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-086",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Stateful Workloads",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What makes managing stateful workloads in Kubernetes more complex than stateless workloads?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Stateful workloads are always slower"
+        },
+        {
+          "id": "B",
+          "text": "Stateful workloads require persistent storage, stable network identities, and careful orchestration of startup/shutdown"
+        },
+        {
+          "id": "C",
+          "text": "Stateful workloads cannot run in Kubernetes"
+        },
+        {
+          "id": "D",
+          "text": "Stateful workloads don't need any special handling"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Stateful workloads (databases, message queues) require: persistent volumes that survive pod restarts, stable network identities (StatefulSets provide this), ordered deployment and scaling, and careful handling of data during updates. They also need backup/restore strategies and often require operators for complex lifecycle management. This contrasts with stateless workloads where any pod is interchangeable.",
+      "tags": [
+        "stateful-workloads",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-087",
+      "domain": "Platform Security and Compliance",
+      "topic": "Zero Trust Networking",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What is the core principle of zero trust networking in cloud native platforms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Trust all internal network traffic by default"
+        },
+        {
+          "id": "B",
+          "text": "Never trust, always verify - authenticate and authorize every request regardless of source"
+        },
+        {
+          "id": "C",
+          "text": "Only use firewalls for security"
+        },
+        {
+          "id": "D",
+          "text": "Disable all security to improve performance"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Zero trust assumes breach and requires verification for every request, regardless of whether it originates inside or outside the network perimeter. Implementation includes: mTLS for service-to-service communication, strong authentication, fine-grained authorization, network segmentation, and continuous monitoring. Service meshes help implement zero trust by providing transparent mTLS and policy enforcement.",
+      "tags": [
+        "zero-trust-networking",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-088",
+      "domain": "Continuous Delivery & Platform Engineering",
+      "topic": "Rollback Strategies",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is the fastest way to rollback a problematic deployment in a GitOps workflow?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Manually edit cluster resources"
+        },
+        {
+          "id": "B",
+          "text": "Revert the Git commit and let GitOps reconcile"
+        },
+        {
+          "id": "C",
+          "text": "Delete all pods"
+        },
+        {
+          "id": "D",
+          "text": "Wait for the next deployment"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "In GitOps, reverting the problematic Git commit and pushing the revert triggers automatic reconciliation back to the previous good state. This is fast, auditable, and consistent with the GitOps model where Git is the source of truth. Manual cluster edits would be overwritten by GitOps reconciliation. Some GitOps tools also support quick rollback commands that automate the Git revert process.",
+      "tags": [
+        "rollback-strategies",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-089",
+      "domain": "Platform Observability",
+      "topic": "Cardinality Explosion",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What is cardinality explosion in metrics, and why is it problematic?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Too many metrics with high-cardinality labels causing storage and query performance issues"
+        },
+        {
+          "id": "B",
+          "text": "Not having enough metrics"
+        },
+        {
+          "id": "C",
+          "text": "Metrics that are too accurate"
+        },
+        {
+          "id": "D",
+          "text": "A beneficial feature of all monitoring systems"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation": "Cardinality explosion occurs when metrics have labels with many unique values (like user IDs, request IDs), creating millions of time series. This overwhelms storage and makes queries slow. Best practices include: using low-cardinality labels (environment, service, not user ID), aggregating before storing, and using logs/traces for high-cardinality data. Prometheus and similar systems are optimized for moderate cardinality.",
+      "tags": [
+        "cardinality-explosion",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-090",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Platform Maturity Model",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "According to platform maturity models, what characterizes a mature platform?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Having the most features"
+        },
+        {
+          "id": "B",
+          "text": "Self-service capabilities, automation, clear SLOs, and strong adoption with positive feedback"
+        },
+        {
+          "id": "C",
+          "text": "The largest platform team"
+        },
+        {
+          "id": "D",
+          "text": "Using the newest technologies"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Platform maturity is measured by: degree of self-service, automation level, clear SLOs and metrics, adoption rates, user satisfaction, and business impact. Mature platforms have well-documented golden paths, automated provisioning, comprehensive observability, and strong feedback loops. Technology choices and team size are less important than actual value delivery and user experience.",
+      "tags": [
+        "platform-maturity-model",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-091",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Backup and Disaster Recovery",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What is the recommended approach for disaster recovery in cloud native platforms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "No backups needed - just redeploy everything"
+        },
+        {
+          "id": "B",
+          "text": "GitOps for configuration, automated backups for stateful data, and regular DR testing"
+        },
+        {
+          "id": "C",
+          "text": "Manual backups once per year"
+        },
+        {
+          "id": "D",
+          "text": "Only backup production, ignore other environments"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Comprehensive DR includes: GitOps for infrastructure and application configuration (enabling recreation), automated backups of stateful data (databases, volumes), backup of cluster state, documented recovery procedures, and regular DR drills. RTO and RPO should be defined based on business requirements. Tools like Velero handle Kubernetes resource and volume backups. DR testing validates that recovery procedures actually work.",
+      "tags": [
+        "backup-and-disaster-recovery",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-092",
+      "domain": "Platform Security and Compliance",
+      "topic": "Compliance as Code",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "How does compliance-as-code improve security posture?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It eliminates the need for compliance teams"
+        },
+        {
+          "id": "B",
+          "text": "It automates compliance checks, makes them repeatable, and enables continuous compliance validation"
+        },
+        {
+          "id": "C",
+          "text": "It makes systems less secure"
+        },
+        {
+          "id": "D",
+          "text": "It only works for financial services"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Compliance-as-code (using tools like OPA, Checkov, or cloud-specific tools) defines compliance requirements as code that can be automatically validated. This enables: shift-left compliance checking in CI/CD, continuous validation in production, consistent enforcement across environments, and audit trails. It doesn't replace compliance teams but makes their work more efficient and effective.",
+      "tags": [
+        "compliance-as-code",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-093",
+      "domain": "Continuous Delivery & Platform Engineering",
+      "topic": "Trunk-Based Development",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "How does trunk-based development support continuous delivery?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It requires long-lived feature branches"
+        },
+        {
+          "id": "B",
+          "text": "It encourages frequent integration to main branch with feature flags, reducing merge conflicts and enabling faster delivery"
+        },
+        {
+          "id": "C",
+          "text": "It prevents any code from being merged"
+        },
+        {
+          "id": "D",
+          "text": "It only works for small teams"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Trunk-based development has developers commit frequently to the main branch (trunk), using feature flags to hide incomplete features. This reduces merge conflicts, enables continuous integration, and supports rapid delivery. Combined with automated testing and feature flags, it allows deploying to production frequently while controlling feature releases independently.",
+      "tags": [
+        "trunk-based-development",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-094",
+      "domain": "Platform Observability",
+      "topic": "Alerting Best Practices",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What makes a good alert in a production system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Alerts for every log message"
+        },
+        {
+          "id": "B",
+          "text": "Actionable, indicating a real problem requiring human intervention, with clear runbooks"
+        },
+        {
+          "id": "C",
+          "text": "Alerts that fire constantly to keep teams aware"
+        },
+        {
+          "id": "D",
+          "text": "Alerts with no context or documentation"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Good alerts are: actionable (require human intervention), indicate real user impact, have clear severity levels, include context and links to dashboards, and have associated runbooks. They should not fire for self-healing issues or non-urgent problems. The goal is high signal-to-noise ratio. Each alert should answer: what's wrong, why it matters, and what to do about it.",
+      "tags": [
+        "alerting-best-practices",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-095",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Platform Team Size",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What is the typical recommended ratio of platform engineers to application developers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1:1 - equal numbers"
+        },
+        {
+          "id": "B",
+          "text": "1:50 to 1:100 depending on platform maturity and automation"
+        },
+        {
+          "id": "C",
+          "text": "100:1 - many platform engineers per developer"
+        },
+        {
+          "id": "D",
+          "text": "Platform teams should have only one person"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Effective platform teams typically support 50-100 developers per platform engineer, though this varies based on platform maturity, automation level, and complexity. Higher ratios are possible with mature, well-automated platforms. The goal is force multiplication - platform engineers enable many developers to be more productive. Team size should be based on platform scope and user needs, not arbitrary ratios.",
+      "tags": [
+        "platform-team-size",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-096",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "API Versioning",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Why is API versioning important for platform APIs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It's not important - APIs should never change"
+        },
+        {
+          "id": "B",
+          "text": "It allows backward-compatible evolution while supporting existing users during transitions"
+        },
+        {
+          "id": "C",
+          "text": "It makes APIs more complex for no benefit"
+        },
+        {
+          "id": "D",
+          "text": "It's only needed for public APIs"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "API versioning enables platform evolution without breaking existing users. Strategies include: URL versioning (/v1/, /v2/), header-based versioning, or content negotiation. Platforms should maintain multiple versions during transition periods, clearly communicate deprecation timelines, and provide migration guides. This balances innovation with stability, treating internal APIs with the same care as external ones.",
+      "tags": [
+        "api-versioning",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-097",
+      "domain": "Platform Security and Compliance",
+      "topic": "Security Scanning Frequency",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "How often should container images be scanned for vulnerabilities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Once when first built, never again"
+        },
+        {
+          "id": "B",
+          "text": "Continuously - at build time, before deployment, and regularly in registries"
+        },
+        {
+          "id": "C",
+          "text": "Only when security incidents occur"
+        },
+        {
+          "id": "D",
+          "text": "Scanning is unnecessary overhead"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Continuous scanning is essential because new vulnerabilities are discovered daily. Scan at: build time (CI/CD), admission time (prevent vulnerable deployments), and continuously in registries (detect newly discovered CVEs in existing images). This multi-stage approach catches vulnerabilities at different lifecycle points. Automated remediation workflows should trigger rebuilds when critical CVEs are found.",
+      "tags": [
+        "security-scanning-frequency",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-098",
+      "domain": "Continuous Delivery & Platform Engineering",
+      "topic": "Environment Parity",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "Why is maintaining parity between development, staging, and production environments important?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It's not important - environments should be completely different"
+        },
+        {
+          "id": "B",
+          "text": "It reduces 'works on my machine' issues and increases confidence in deployments"
+        },
+        {
+          "id": "C",
+          "text": "It wastes resources by duplicating everything"
+        },
+        {
+          "id": "D",
+          "text": "It only matters for large companies"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Environment parity reduces surprises by ensuring code tested in staging behaves the same in production. Differences in configuration, dependencies, or infrastructure cause bugs that only appear in production. While perfect parity is expensive, key aspects should match: software versions, configuration management approach, and infrastructure patterns. Containers and IaC help maintain parity efficiently.",
+      "tags": [
+        "environment-parity",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-099",
+      "domain": "Platform Observability",
+      "topic": "Logging Levels",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What is the purpose of different logging levels (DEBUG, INFO, WARN, ERROR)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To make logs more colorful"
+        },
+        {
+          "id": "B",
+          "text": "To categorize log importance and enable filtering based on severity"
+        },
+        {
+          "id": "C",
+          "text": "To slow down applications"
+        },
+        {
+          "id": "D",
+          "text": "Logging levels are unnecessary"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Logging levels enable filtering logs by severity: DEBUG for detailed troubleshooting, INFO for normal operations, WARN for potential issues, ERROR for failures. This allows adjusting verbosity without code changes - production typically uses INFO or WARN, while debugging uses DEBUG. Proper level usage prevents log spam while ensuring important events are captured. Structured logging enhances this with additional context fields.",
+      "tags": [
+        "logging-levels",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-100",
+      "domain": "Platform Engineering Core Fundamentals",
+      "topic": "Platform Feedback Loops",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "How should platform teams gather and act on user feedback?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ignore feedback and build what the platform team wants"
+        },
+        {
+          "id": "B",
+          "text": "Regular surveys, office hours, feedback channels, and transparent roadmap updates"
+        },
+        {
+          "id": "C",
+          "text": "Only talk to executives, not actual developers"
+        },
+        {
+          "id": "D",
+          "text": "Gather feedback but never act on it"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Effective feedback loops include: regular user surveys (NPS, satisfaction), office hours for direct interaction, dedicated Slack channels, feature request tracking, usage analytics, and transparent roadmap communication. Feedback should influence prioritization decisions. Closing the loop by communicating what was built based on feedback builds trust and engagement. This product management approach treats developers as valued customers.",
+      "tags": [
+        "platform-feedback-loops",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-101",
+      "domain": "Platform Architecture and Capabilities",
+      "topic": "Resource Quotas",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is the purpose of Kubernetes ResourceQuotas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To make applications slower"
+        },
+        {
+          "id": "B",
+          "text": "To limit resource consumption per namespace, preventing resource exhaustion and enabling fair sharing"
+        },
+        {
+          "id": "C",
+          "text": "To eliminate the need for resource requests/limits"
+        },
+        {
+          "id": "D",
+          "text": "ResourceQuotas are deprecated and shouldn't be used"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "ResourceQuotas limit total resource consumption (CPU, memory, storage, object counts) per namespace, preventing any single team from consuming all cluster resources. They enable fair sharing in multi-tenant clusters and prevent accidental resource exhaustion. Quotas work with LimitRanges (per-pod limits) to provide comprehensive resource governance. This is essential for cluster stability and cost control.",
+      "tags": [
+        "resource-quotas",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-102",
+      "domain": "Platform Security and Compliance",
+      "topic": "Audit Logging",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "Why is Kubernetes audit logging important for security and compliance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It's not important - audit logs waste storage"
+        },
+        {
+          "id": "B",
+          "text": "It provides a record of all API requests for security investigation, compliance, and troubleshooting"
+        },
+        {
+          "id": "C",
+          "text": "It replaces the need for RBAC"
+        },
+        {
+          "id": "D",
+          "text": "It only logs successful requests"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Kubernetes audit logs record all API server requests (who, what, when, result), providing: security incident investigation capabilities, compliance evidence, troubleshooting data, and detection of unauthorized access attempts. Audit policies control what's logged to balance detail with storage costs. Logs should be sent to secure, immutable storage. This is critical for meeting compliance requirements and security forensics.",
+      "tags": [
+        "audit-logging",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-103",
+      "domain": "Continuous Delivery & Platform Engineering",
+      "topic": "Deployment Frequency",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "According to DORA metrics, why is deployment frequency important?",
+      "options": [
+        {
+          "id": "A",
+          "text": "More deployments always mean more bugs"
+        },
+        {
+          "id": "B",
+          "text": "High deployment frequency indicates ability to deliver value quickly and respond to changes"
+        },
+        {
+          "id": "C",
+          "text": "Deployment frequency doesn't matter"
+        },
+        {
+          "id": "D",
+          "text": "Low deployment frequency is always better"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Deployment frequency is a key DORA metric indicating organizational agility. High-performing teams deploy multiple times per day, enabled by: automated testing, CI/CD pipelines, small batch sizes, and confidence in rollback capabilities. Frequent deployments reduce risk (smaller changes), enable faster feedback, and allow rapid response to issues or opportunities. It's a leading indicator of software delivery performance.",
+      "tags": [
+        "deployment-frequency",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-104",
+      "domain": "Platform Observability",
+      "topic": "Synthetic Monitoring",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is synthetic monitoring and when is it useful?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fake monitoring that doesn't work"
+        },
+        {
+          "id": "B",
+          "text": "Proactive monitoring using scripted transactions to test system availability and performance from user perspective"
+        },
+        {
+          "id": "C",
+          "text": "Only monitoring synthetic materials"
+        },
+        {
+          "id": "D",
+          "text": "Monitoring that replaces all other observability"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Synthetic monitoring uses automated scripts to simulate user interactions, testing system availability and performance proactively. It's useful for: detecting issues before users do, monitoring from multiple geographic locations, testing critical user journeys, and establishing baseline performance. It complements real user monitoring (RUM) by providing consistent, predictable test traffic. Common tools include Pingdom, Datadog Synthetics, or custom scripts.",
+      "tags": [
+        "synthetic-monitoring",
+        "cnpa"
       ]
     }
   ]
