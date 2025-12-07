@@ -1,25 +1,25 @@
 # CNPA Quiz Questions Summary
 
 ## Overview
-This quiz app contains **104 high-quality practice questions** for the CNCF Certified Cloud Native Platform Engineering Associate (CNPA) exam.
+This quiz app contains **135 high-quality practice questions** for the CNCF Certified Cloud Native Platform Engineering Associate (CNPA) exam.
 
 ## Question Statistics
 
-### Total Questions: 104
+### Total Questions: 135
 - Each quiz randomly selects **50 questions** from the pool
-- Questions are renumbered CNPA-001 through CNPA-104
+- Questions are renumbered CNPA-001 through CNPA-135
 
 ### By Difficulty Level
-- **Easy**: 27 questions (26%)
-- **Medium**: 51 questions (49%)
-- **Hard**: 26 questions (25%)
+- **Easy**: 31 questions (23%)
+- **Medium**: 74 questions (55%)
+- **Hard**: 30 questions (22%)
 
 ### By Domain
-- **Platform Engineering Core Fundamentals**: 25 questions
-- **Platform Architecture and Capabilities**: 19 questions
-- **Platform Security and Compliance**: 17 questions
-- **Continuous Delivery & Platform Engineering**: 13 questions
-- **Platform Observability**: 11 questions
+- **Platform Engineering Core Fundamentals**: 30 questions
+- **Platform Architecture and Capabilities**: 28 questions
+- **Platform Security and Compliance**: 24 questions
+- **Continuous Delivery & Platform Engineering**: 19 questions
+- **Platform Observability**: 15 questions
 - **Developer Experience**: 5 questions
 - **Observability and Monitoring**: 5 questions
 - **Other domains**: 9 questions
@@ -32,6 +32,8 @@ This quiz app contains **104 high-quality practice questions** for the CNCF Cert
 3. **questions_additional_20.json** - 5 questions (LF-style)
 4. **questions_comprehensive_45.json** - 29 questions (comprehensive coverage)
 5. **questions_final_20.json** - 20 questions (final additions)
+6. **questions_batch2_lf.json** - 16 questions (LF sample questions batch 2)
+7. **questions_batch2_extended.json** - 15 questions (extended based on LF style)
 
 ### Question Quality
 All questions follow the Linux Foundation style with:
@@ -152,5 +154,5 @@ Potential improvements:
 ---
 
 **Last Updated**: December 6, 2025
-**Total Questions**: 104
+**Total Questions**: 135
 **Quiz Size**: 50 questions per attempt

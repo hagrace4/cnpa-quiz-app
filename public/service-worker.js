@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cnpa-quiz-v8';
+const CACHE_NAME = 'cnpa-quiz-v9';
 const urlsToCache = [
     '/',
     '/index.html',

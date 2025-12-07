@@ -4,7 +4,7 @@ A Progressive Web App (PWA) for practicing CNCF Certified Cloud Native Platform 
 
 ## Features
 
-- ✅ 104 practice questions covering CNPA exam topics
+- ✅ 135 practice questions covering CNPA exam topics
 - 🎲 Random selection of 50 questions per quiz attempt
 - 📱 Offline support via Service Worker
 - 💾 Progress tracking with IndexedDB
@@ -130,7 +130,7 @@ cnpa-quiz-app/
 │   │   ├── db.js            # IndexedDB wrapper
 │   │   └── sw-register.js   # Service worker registration
 │   ├── data/
-│   │   └── questions.json   # Quiz questions (104 questions)
+│   │   └── questions.json   # Quiz questions (135 questions)
 │   └── icons/
 │       ├── icon-192.png     # PWA icon (192x192)
 │       ├── icon-512.png     # PWA icon (512x512)
@@ -140,7 +140,9 @@ cnpa-quiz-app/
 │   ├── questions_gpt.json   # 20 GPT-generated questions
 │   ├── questions_additional_20.json      # 5 LF-style questions
 │   ├── questions_comprehensive_45.json   # 29 comprehensive questions
-│   └── questions_final_20.json           # 20 final questions
+│   ├── questions_final_20.json           # 20 final questions
+│   ├── questions_batch2_lf.json          # 16 LF sample questions
+│   └── questions_batch2_extended.json    # 15 extended questions
 ├── scripts/
 │   └── convert_questions.py # Data conversion script
 └── README.md                # This file
