@@ -4768,6 +4768,1362 @@
         "kafka",
         "eventual-consistency"
       ]
+    },
+    {
+      "id": "CNPA-136",
+      "domain": "Platform APIs and Provisioning Infrastructure",
+      "topic": "Kubernetes Reconciliation Loop",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is the primary function of the Kubernetes reconciliation loop?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To restart pods on a fixed schedule"
+        },
+        {
+          "id": "B",
+          "text": "To continuously compare desired state with actual state and make corrections"
+        },
+        {
+          "id": "C",
+          "text": "To delete old resources automatically"
+        },
+        {
+          "id": "D",
+          "text": "To generate audit logs for compliance"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "The Kubernetes reconciliation loop is the core mechanism of the control plane. Controllers continuously watch the desired state (defined in manifests) and compare it to the actual state of the cluster. When drift is detected, the controller takes action to reconcile the actual state back to the desired state. This declarative model is fundamental to Kubernetes' self-healing capabilities and is the basis for operators and custom controllers.",
+      "tags": [
+        "reconciliation-loop",
+        "kubernetes",
+        "control-plane",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-137",
+      "domain": "Platform APIs and Provisioning Infrastructure",
+      "topic": "Custom Resource Definitions",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "How do Custom Resource Definitions (CRDs) enable self-service platforms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They replace the need for Kubernetes entirely"
+        },
+        {
+          "id": "B",
+          "text": "They extend the Kubernetes API to allow teams to request platform capabilities using familiar kubectl commands"
+        },
+        {
+          "id": "C",
+          "text": "They are only used for monitoring purposes"
+        },
+        {
+          "id": "D",
+          "text": "They disable RBAC for easier access"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "CRDs extend the Kubernetes API with custom resource types, allowing platform teams to expose platform capabilities (databases, certificates, environments) as Kubernetes-native objects. Developers can request resources using kubectl or GitOps workflows, while operators handle the actual provisioning. This provides a consistent, declarative interface for self-service that integrates with existing Kubernetes tooling and RBAC.",
+      "tags": [
+        "crd",
+        "custom-resources",
+        "self-service",
+        "kubernetes-api",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-138",
+      "domain": "Platform APIs and Provisioning Infrastructure",
+      "topic": "Kubernetes Operator Pattern",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What distinguishes a Kubernetes Operator from a standard controller?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Operators can only manage stateless applications"
+        },
+        {
+          "id": "B",
+          "text": "Operators encode domain-specific operational knowledge to manage complex application lifecycles"
+        },
+        {
+          "id": "C",
+          "text": "Operators don't use the reconciliation loop"
+        },
+        {
+          "id": "D",
+          "text": "Operators are deprecated in favor of Helm charts"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Kubernetes Operators extend the controller pattern by encoding domain-specific operational knowledge. While standard controllers manage basic Kubernetes resources, operators understand complex application lifecycles including installation, upgrades, backups, scaling, and failure recovery. For example, a database operator knows how to perform rolling upgrades, handle failover, and manage backups - tasks that would otherwise require manual intervention or complex scripts.",
+      "tags": [
+        "operator-pattern",
+        "kubernetes",
+        "automation",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-139",
+      "domain": "Platform APIs and Provisioning Infrastructure",
+      "topic": "Infrastructure Provisioning with Kubernetes",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What is Crossplane's approach to infrastructure provisioning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It replaces Terraform with shell scripts"
+        },
+        {
+          "id": "B",
+          "text": "It uses Kubernetes CRDs and controllers to provision and manage cloud infrastructure declaratively"
+        },
+        {
+          "id": "C",
+          "text": "It only works with on-premises infrastructure"
+        },
+        {
+          "id": "D",
+          "text": "It requires manual approval for every resource"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Crossplane extends Kubernetes to become a universal control plane for infrastructure. It uses CRDs to represent cloud resources (databases, buckets, networks) and controllers to provision them via cloud provider APIs. This enables teams to manage both applications and infrastructure using the same Kubernetes-native workflows, GitOps practices, and RBAC policies. Compositions allow platform teams to create higher-level abstractions hiding cloud complexity.",
+      "tags": [
+        "crossplane",
+        "infrastructure-provisioning",
+        "kubernetes",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-140",
+      "domain": "Platform APIs and Provisioning Infrastructure",
+      "topic": "APIs for Self-Service Platforms",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is a key benefit of exposing platform capabilities through APIs rather than tickets or manual requests?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It increases the workload on platform teams"
+        },
+        {
+          "id": "B",
+          "text": "It enables automation, reduces wait times, and provides consistent, auditable provisioning"
+        },
+        {
+          "id": "C",
+          "text": "It eliminates the need for any security controls"
+        },
+        {
+          "id": "D",
+          "text": "It makes changes impossible to track"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "API-driven self-service transforms platform interactions from ticket-based workflows to automated, on-demand provisioning. Benefits include: reduced wait times (minutes vs days), consistent resource configuration, built-in policy enforcement, complete audit trails, and integration with CI/CD pipelines. This shifts platform teams from ticket processors to capability builders, enabling them to scale support without linear headcount growth.",
+      "tags": [
+        "self-service",
+        "platform-api",
+        "automation",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-141",
+      "domain": "IDPs and Developer Experience",
+      "topic": "Developer Portals for Platform Adoption",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is the primary purpose of a developer portal like Backstage in platform engineering?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To replace all CI/CD tools"
+        },
+        {
+          "id": "B",
+          "text": "To provide a unified interface for service discovery, documentation, and self-service actions"
+        },
+        {
+          "id": "C",
+          "text": "To store application source code"
+        },
+        {
+          "id": "D",
+          "text": "To run production workloads"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Developer portals like Backstage serve as the front door to the platform, aggregating information from multiple sources into a single interface. They provide: service catalog for discovery, documentation hub, self-service scaffolding for new projects, integration with CI/CD and monitoring tools, and ownership visibility. This reduces context switching and cognitive load, making the platform more discoverable and accessible to developers.",
+      "tags": [
+        "developer-portal",
+        "backstage",
+        "developer-experience",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-142",
+      "domain": "IDPs and Developer Experience",
+      "topic": "API-Driven Service Catalogs",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "How does a service catalog improve developer productivity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By hiding all services from developers"
+        },
+        {
+          "id": "B",
+          "text": "By providing searchable inventory of services with ownership, documentation, and dependency information"
+        },
+        {
+          "id": "C",
+          "text": "By requiring manual registration of every API call"
+        },
+        {
+          "id": "D",
+          "text": "By eliminating the need for service documentation"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "A service catalog provides a searchable, up-to-date inventory of all services in the organization. It includes: service ownership and contact information, API documentation, dependency graphs, health status, and links to monitoring dashboards. This enables developers to quickly find and understand services they need to integrate with, reducing time spent searching through wikis or asking colleagues. Automated discovery keeps the catalog current.",
+      "tags": [
+        "service-catalog",
+        "developer-experience",
+        "discovery",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-143",
+      "domain": "IDPs and Developer Experience",
+      "topic": "Simplified Access to Platform Capabilities",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What is a 'golden path' in platform engineering?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The most expensive infrastructure option"
+        },
+        {
+          "id": "B",
+          "text": "A recommended, well-supported, and easy-to-use path for common development tasks"
+        },
+        {
+          "id": "C",
+          "text": "A mandatory process that cannot be deviated from"
+        },
+        {
+          "id": "D",
+          "text": "A path only available to senior developers"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Golden paths (or paved roads) are opinionated, well-supported workflows that make the right thing the easy thing. They provide templates, automation, and documentation for common tasks like creating new services, setting up CI/CD, or deploying to production. While developers can deviate when needed, golden paths reduce cognitive load and ensure best practices by default. They represent the platform team's recommended approach.",
+      "tags": [
+        "golden-path",
+        "paved-road",
+        "developer-experience",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-144",
+      "domain": "IDPs and Developer Experience",
+      "topic": "AI/ML in Platform Automation",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "How can AI/ML enhance platform engineering capabilities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By replacing all human platform engineers"
+        },
+        {
+          "id": "B",
+          "text": "By enabling predictive scaling, anomaly detection, intelligent alerting, and automated remediation"
+        },
+        {
+          "id": "C",
+          "text": "AI/ML has no application in platform engineering"
+        },
+        {
+          "id": "D",
+          "text": "By making all decisions without human oversight"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "AI/ML enhances platforms through: predictive autoscaling based on traffic patterns, anomaly detection in metrics and logs, intelligent alert correlation to reduce noise, automated root cause analysis, and self-healing remediation for known issues. AIOps tools can identify patterns humans might miss and accelerate incident response. However, human oversight remains essential for critical decisions and novel situations.",
+      "tags": [
+        "aiops",
+        "machine-learning",
+        "automation",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-145",
+      "domain": "IDPs and Developer Experience",
+      "topic": "Developer Portal Adoption",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is the most important factor for successful developer portal adoption?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mandating its use through policy"
+        },
+        {
+          "id": "B",
+          "text": "Ensuring it provides genuine value and solves real developer pain points"
+        },
+        {
+          "id": "C",
+          "text": "Adding as many features as possible"
+        },
+        {
+          "id": "D",
+          "text": "Making it the only way to access any system"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Developer portal adoption depends on providing genuine value. If the portal solves real pain points (finding service owners, accessing documentation, scaffolding new projects), developers will use it voluntarily. Mandating use without value creates resentment. Successful portals start with high-value use cases, gather feedback continuously, and iterate based on actual developer needs rather than platform team assumptions.",
+      "tags": [
+        "developer-portal",
+        "adoption",
+        "developer-experience",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-146",
+      "domain": "Measuring your Platform",
+      "topic": "DORA Metrics for Platform Initiatives",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Which DORA metric measures how quickly a team can recover from a production incident?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deployment Frequency"
+        },
+        {
+          "id": "B",
+          "text": "Lead Time for Changes"
+        },
+        {
+          "id": "C",
+          "text": "Mean Time to Recovery (MTTR)"
+        },
+        {
+          "id": "D",
+          "text": "Change Failure Rate"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation": "Mean Time to Recovery (MTTR) measures the time from when a production incident is detected to when service is restored. It reflects the team's ability to detect, diagnose, and fix issues quickly. Low MTTR indicates good observability, effective incident response processes, and reliable rollback capabilities. Elite performers have MTTR under one hour, while low performers may take over a week.",
+      "tags": [
+        "dora-metrics",
+        "mttr",
+        "incident-response",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-147",
+      "domain": "Measuring your Platform",
+      "topic": "DORA Metrics for Platform Initiatives",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What are the four key DORA metrics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "CPU, Memory, Disk, Network"
+        },
+        {
+          "id": "B",
+          "text": "Deployment Frequency, Lead Time for Changes, Change Failure Rate, Mean Time to Recovery"
+        },
+        {
+          "id": "C",
+          "text": "Lines of Code, Bug Count, Test Coverage, Documentation"
+        },
+        {
+          "id": "D",
+          "text": "Team Size, Budget, Timeline, Scope"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "The four DORA metrics are: Deployment Frequency (how often code is deployed to production), Lead Time for Changes (time from commit to production), Change Failure Rate (percentage of deployments causing failures), and Mean Time to Recovery (time to restore service after an incident). These metrics, validated by years of research, predict both software delivery performance and organizational performance.",
+      "tags": [
+        "dora-metrics",
+        "software-delivery",
+        "performance",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-148",
+      "domain": "Measuring your Platform",
+      "topic": "Platform Efficiency and Team Productivity",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "How should platform teams measure their impact on developer productivity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By counting lines of code written"
+        },
+        {
+          "id": "B",
+          "text": "By tracking metrics like time-to-first-deployment, self-service adoption, and developer satisfaction scores"
+        },
+        {
+          "id": "C",
+          "text": "By measuring how many tickets the platform team closes"
+        },
+        {
+          "id": "D",
+          "text": "Productivity cannot be measured"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Platform impact should be measured through outcomes, not outputs. Key metrics include: time-to-first-deployment for new services, self-service adoption rates, developer satisfaction (NPS/surveys), reduction in manual requests, and DORA metrics improvement. These metrics show whether the platform is actually making developers more productive and reducing friction, rather than just measuring platform team activity.",
+      "tags": [
+        "platform-metrics",
+        "productivity",
+        "developer-experience",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-149",
+      "domain": "Measuring your Platform",
+      "topic": "Platform Efficiency and Team Productivity",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What is the SPACE framework used for in platform engineering?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Measuring disk space usage"
+        },
+        {
+          "id": "B",
+          "text": "A multidimensional framework for measuring developer productivity across Satisfaction, Performance, Activity, Communication, and Efficiency"
+        },
+        {
+          "id": "C",
+          "text": "Planning office layouts"
+        },
+        {
+          "id": "D",
+          "text": "Calculating cloud costs"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "SPACE is a framework for measuring developer productivity holistically: Satisfaction (developer happiness and fulfillment), Performance (outcomes and quality), Activity (actions and outputs), Communication (collaboration effectiveness), and Efficiency (flow and minimal friction). It recognizes that productivity is multidimensional and no single metric captures it fully. Platform teams can use SPACE to ensure they're improving multiple dimensions.",
+      "tags": [
+        "space-framework",
+        "productivity",
+        "metrics",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-150",
+      "domain": "Measuring your Platform",
+      "topic": "DORA Metrics for Platform Initiatives",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What does a high Change Failure Rate indicate about a team's delivery process?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The team is deploying too frequently"
+        },
+        {
+          "id": "B",
+          "text": "There may be gaps in testing, review processes, or deployment practices that allow defects to reach production"
+        },
+        {
+          "id": "C",
+          "text": "The team is too cautious about changes"
+        },
+        {
+          "id": "D",
+          "text": "Change Failure Rate is not a meaningful metric"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Change Failure Rate measures the percentage of deployments that result in degraded service or require remediation. A high rate suggests issues with: test coverage, code review effectiveness, deployment practices, or environment parity. Elite performers maintain under 15% failure rate. Improving this metric typically requires better automated testing, staged rollouts, and feature flags rather than deploying less frequently.",
+      "tags": [
+        "dora-metrics",
+        "change-failure-rate",
+        "quality",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-151",
+      "domain": "Measuring your Platform",
+      "topic": "Platform Efficiency and Team Productivity",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "Why is tracking 'time to first deployment' important for platform teams?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It measures how fast servers boot up"
+        },
+        {
+          "id": "B",
+          "text": "It shows how quickly new developers or projects can become productive using the platform"
+        },
+        {
+          "id": "C",
+          "text": "It's only relevant for the first day of a project"
+        },
+        {
+          "id": "D",
+          "text": "It measures network latency"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Time to first deployment measures how long it takes a new developer or project to go from zero to a working deployment in production. It reflects the effectiveness of onboarding, documentation, golden paths, and self-service capabilities. A short time (hours or days vs weeks) indicates a mature platform with good developer experience. This metric directly shows the platform's ability to reduce friction and accelerate value delivery.",
+      "tags": [
+        "platform-metrics",
+        "onboarding",
+        "developer-experience",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-152",
+      "domain": "Measuring your Platform",
+      "topic": "Platform Efficiency and Team Productivity",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "How can platform teams use metrics to prioritize their roadmap?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By building whatever is technically interesting"
+        },
+        {
+          "id": "B",
+          "text": "By identifying bottlenecks in developer workflows through data and focusing on high-impact improvements"
+        },
+        {
+          "id": "C",
+          "text": "By copying what other companies are doing"
+        },
+        {
+          "id": "D",
+          "text": "Metrics should not influence roadmap decisions"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Data-driven prioritization uses metrics to identify where developers spend the most time waiting or struggling. Analyzing deployment pipelines, provisioning times, incident patterns, and support tickets reveals bottlenecks. Platform teams should focus on improvements with the highest impact on developer productivity and satisfaction, validated by metrics before and after changes. This ensures limited platform team capacity is spent on the most valuable work.",
+      "tags": [
+        "platform-metrics",
+        "prioritization",
+        "roadmap",
+        "cnpa"
+      ]
+    },
+    {
+      "id": "CNPA-153",
+      "domain": "Platform Observability, Security, and Conformance",
+      "topic": "Observability Fundamentals: Traces, Metrics, Logs, and Events",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Which of the following best describes the relationship between the three pillars of observability (logs, metrics, and traces) in a cloud-native platform?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are mutually exclusive and teams should choose only one to implement."
+        },
+        {
+          "id": "B",
+          "text": "They are complementary signals that together provide a complete picture of system behavior and health."
+        },
+        {
+          "id": "C",
+          "text": "Traces replace the need for logs in microservices architectures."
+        },
+        {
+          "id": "D",
+          "text": "Metrics are only useful for billing purposes, not for operational insights."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "The three pillars of observability\u2014logs, metrics, and traces\u2014are complementary and work together to provide comprehensive visibility into system behavior. Logs capture discrete events, metrics provide aggregated numerical measurements over time, and traces follow requests across distributed services. Together, they enable teams to understand what is happening, detect anomalies, and diagnose issues in complex cloud-native environments.",
+      "tags": [
+        "observability",
+        "logs",
+        "metrics",
+        "traces",
+        "three pillars"
+      ]
+    },
+    {
+      "id": "CNPA-154",
+      "domain": "Platform Observability, Security, and Conformance",
+      "topic": "Policy Engines for Platform Governance",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "A platform team wants to enforce that all container images deployed to their Kubernetes clusters must come from an approved internal registry. Which approach best implements this governance requirement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Add documentation asking developers to use the approved registry."
+        },
+        {
+          "id": "B",
+          "text": "Use a policy engine like OPA Gatekeeper or Kyverno to automatically reject pods with images from unapproved registries."
+        },
+        {
+          "id": "C",
+          "text": "Manually review all deployment manifests before they are applied."
+        },
+        {
+          "id": "D",
+          "text": "Configure network policies to block traffic to external registries."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Policy engines like OPA Gatekeeper and Kyverno act as admission controllers in Kubernetes, automatically validating and potentially mutating resources before they are persisted. By defining policies that check image sources, the platform team can enforce governance requirements consistently and automatically, without manual intervention. This 'shift-left' approach catches violations early and ensures compliance at scale.",
+      "tags": [
+        "policy engine",
+        "OPA",
+        "Gatekeeper",
+        "Kyverno",
+        "governance",
+        "admission controller"
+      ]
+    },
+    {
+      "id": "CNPA-155",
+      "domain": "Platform Observability, Security, and Conformance",
+      "topic": "Kubernetes Security Essentials",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is the primary purpose of Kubernetes NetworkPolicies in platform security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To encrypt all network traffic between pods automatically."
+        },
+        {
+          "id": "B",
+          "text": "To control which pods can communicate with each other and with external endpoints."
+        },
+        {
+          "id": "C",
+          "text": "To load balance traffic across multiple pod replicas."
+        },
+        {
+          "id": "D",
+          "text": "To assign static IP addresses to pods."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Kubernetes NetworkPolicies provide a way to control network traffic flow at the pod level, implementing a form of microsegmentation. By default, all pods in a cluster can communicate with each other. NetworkPolicies allow platform teams to define rules that restrict ingress and egress traffic, following the principle of least privilege. This is essential for implementing zero-trust security models in cloud-native environments.",
+      "tags": [
+        "NetworkPolicy",
+        "Kubernetes",
+        "security",
+        "microsegmentation",
+        "zero-trust"
+      ]
+    },
+    {
+      "id": "CNPA-156",
+      "domain": "Platform Observability, Security, and Conformance",
+      "topic": "Secure Service Communication",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "Which technology is commonly used to implement mutual TLS (mTLS) between services in a Kubernetes cluster without requiring application code changes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Kubernetes Ingress controllers"
+        },
+        {
+          "id": "B",
+          "text": "Service mesh (e.g., Istio, Linkerd)"
+        },
+        {
+          "id": "C",
+          "text": "Kubernetes ConfigMaps"
+        },
+        {
+          "id": "D",
+          "text": "Container runtime interfaces"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Service meshes like Istio and Linkerd provide transparent mTLS encryption between services by injecting sidecar proxies alongside application containers. These proxies handle certificate management, encryption, and authentication automatically, without requiring changes to application code. This approach enables platform teams to enforce secure service-to-service communication consistently across all workloads.",
+      "tags": [
+        "service mesh",
+        "mTLS",
+        "Istio",
+        "Linkerd",
+        "security",
+        "encryption"
+      ]
+    },
+    {
+      "id": "CNPA-157",
+      "domain": "Platform Observability, Security, and Conformance",
+      "topic": "Security in CI/CD Pipelines",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is the purpose of signing container images in a CI/CD pipeline?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To compress the image for faster downloads."
+        },
+        {
+          "id": "B",
+          "text": "To verify the image's integrity and authenticity, ensuring it hasn't been tampered with."
+        },
+        {
+          "id": "C",
+          "text": "To encrypt the image contents so they cannot be inspected."
+        },
+        {
+          "id": "D",
+          "text": "To automatically update the image when new base images are released."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Container image signing (using tools like Cosign or Notary) creates a cryptographic signature that proves the image was built by a trusted source and hasn't been modified since signing. This is a critical supply chain security practice that allows platforms to verify image authenticity before deployment, preventing the execution of tampered or malicious images.",
+      "tags": [
+        "image signing",
+        "Cosign",
+        "supply chain security",
+        "CI/CD",
+        "container security"
+      ]
+    },
+    {
+      "id": "CNPA-158",
+      "domain": "Platform APIs and Provisioning Infrastructure",
+      "topic": "Kubernetes Reconciliation Loop",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is the core principle behind Kubernetes' reconciliation loop?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Execute a sequence of imperative commands to reach the desired state."
+        },
+        {
+          "id": "B",
+          "text": "Continuously compare the actual state with the desired state and make adjustments to converge them."
+        },
+        {
+          "id": "C",
+          "text": "Run scheduled jobs at fixed intervals to check system health."
+        },
+        {
+          "id": "D",
+          "text": "Wait for user input before making any changes to the cluster."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "The Kubernetes reconciliation loop is the heart of its declarative model. Controllers continuously watch the actual state of resources and compare it to the desired state defined in resource specifications. When differences are detected, the controller takes action to reconcile them. This self-healing approach ensures the system continuously converges toward the desired state, even after failures or manual changes.",
+      "tags": [
+        "reconciliation",
+        "controller",
+        "declarative",
+        "Kubernetes",
+        "self-healing"
+      ]
+    },
+    {
+      "id": "CNPA-159",
+      "domain": "Platform APIs and Provisioning Infrastructure",
+      "topic": "APIs for Self-Service Platforms (CRDs)",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "How do Custom Resource Definitions (CRDs) enable platform teams to extend Kubernetes for self-service capabilities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "CRDs allow replacing the Kubernetes API server with a custom implementation."
+        },
+        {
+          "id": "B",
+          "text": "CRDs define new resource types that can be managed through the Kubernetes API, enabling domain-specific abstractions."
+        },
+        {
+          "id": "C",
+          "text": "CRDs are only used for monitoring and have no impact on resource management."
+        },
+        {
+          "id": "D",
+          "text": "CRDs bypass the Kubernetes API entirely for faster resource creation."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Custom Resource Definitions (CRDs) allow platform teams to extend the Kubernetes API with new resource types tailored to their organization's needs. For example, a platform team might create a 'Database' CRD that abstracts the complexity of provisioning a managed database. Users interact with these custom resources through familiar kubectl commands and YAML manifests, while controllers handle the underlying implementation details.",
+      "tags": [
+        "CRD",
+        "Custom Resource",
+        "Kubernetes API",
+        "extensibility",
+        "self-service"
+      ]
+    },
+    {
+      "id": "CNPA-160",
+      "domain": "Platform APIs and Provisioning Infrastructure",
+      "topic": "Kubernetes Operator Pattern for Integration",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What distinguishes a Kubernetes Operator from a standard controller?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Operators can only manage built-in Kubernetes resources."
+        },
+        {
+          "id": "B",
+          "text": "Operators encode domain-specific operational knowledge to manage complex applications throughout their lifecycle."
+        },
+        {
+          "id": "C",
+          "text": "Operators run outside the Kubernetes cluster for security reasons."
+        },
+        {
+          "id": "D",
+          "text": "Operators are deprecated in favor of Helm charts."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Kubernetes Operators extend the controller pattern by encoding domain-specific operational knowledge\u2014the kind of expertise a human operator would have\u2014into software. While standard controllers manage resource state, Operators understand application-specific concerns like backup procedures, upgrade paths, scaling decisions, and failure recovery. This enables platforms to offer complex services (like databases or message queues) as self-service capabilities with automated day-2 operations.",
+      "tags": [
+        "Operator",
+        "controller",
+        "automation",
+        "day-2 operations",
+        "lifecycle management"
+      ]
+    },
+    {
+      "id": "CNPA-161",
+      "domain": "Platform APIs and Provisioning Infrastructure",
+      "topic": "Infrastructure Provisioning with Kubernetes",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is Crossplane's primary value proposition for platform engineering?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It provides a container runtime alternative to containerd."
+        },
+        {
+          "id": "B",
+          "text": "It enables provisioning and managing cloud infrastructure using Kubernetes-native APIs and the reconciliation model."
+        },
+        {
+          "id": "C",
+          "text": "It replaces Helm for application packaging."
+        },
+        {
+          "id": "D",
+          "text": "It provides a graphical user interface for Kubernetes cluster management."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Crossplane extends Kubernetes to become a universal control plane for infrastructure. It allows platform teams to define cloud resources (like databases, storage buckets, and networking components) as Kubernetes custom resources. This means developers can provision infrastructure using the same declarative YAML and kubectl workflows they use for applications, while the platform team maintains control over what resources are available and how they're configured.",
+      "tags": [
+        "Crossplane",
+        "infrastructure as code",
+        "control plane",
+        "cloud resources",
+        "provisioning"
+      ]
+    },
+    {
+      "id": "CNPA-162",
+      "domain": "IDPs and Developer Experience",
+      "topic": "Developer Portals for Platform Adoption",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "According to the CNCF Platforms White Paper, what is a key attribute of successful platforms regarding user experience?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Platforms should expose all underlying complexity to give users maximum control."
+        },
+        {
+          "id": "B",
+          "text": "Platforms should offer capabilities through consistent interfaces and meet users where they are (GUIs, APIs, CLIs, IDEs)."
+        },
+        {
+          "id": "C",
+          "text": "Platforms should only provide command-line interfaces to ensure automation."
+        },
+        {
+          "id": "D",
+          "text": "Platforms should require users to understand all implementation details before granting access."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "The CNCF Platforms White Paper emphasizes that platforms should offer capabilities through consistent interfaces while meeting users where they are. This means providing multiple interaction methods\u2014web portals for those who prefer GUIs, APIs for automation, command-line tools for power users, and IDE integrations for developers. The goal is to reduce cognitive load while enabling self-service access to platform capabilities.",
+      "tags": [
+        "user experience",
+        "developer portal",
+        "self-service",
+        "CNCF",
+        "platform attributes"
+      ]
+    },
+    {
+      "id": "CNPA-163",
+      "domain": "IDPs and Developer Experience",
+      "topic": "Simplified Access to Platform Capabilities",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What is a 'golden path' in the context of platform engineering?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The most expensive tier of cloud services available to developers."
+        },
+        {
+          "id": "B",
+          "text": "A recommended, well-supported, and easy-to-use path for developers to accomplish common tasks like building and deploying applications."
+        },
+        {
+          "id": "C",
+          "text": "A mandatory workflow that all teams must follow without exception."
+        },
+        {
+          "id": "D",
+          "text": "The network route with the lowest latency in a cluster."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "A golden path (also called a 'paved road') is a recommended, opinionated, and well-supported way for developers to accomplish common tasks. It typically includes templates, documentation, and pre-configured tooling that embody best practices. Golden paths reduce cognitive load by providing sensible defaults while still allowing teams to deviate when necessary. They are a key mechanism for platform teams to scale their impact across many product teams.",
+      "tags": [
+        "golden path",
+        "paved road",
+        "developer experience",
+        "templates",
+        "best practices"
+      ]
+    },
+    {
+      "id": "CNPA-164",
+      "domain": "IDPs and Developer Experience",
+      "topic": "API-Driven Service Catalogs",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is the primary purpose of a service catalog in an Internal Developer Platform?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To track the cost of all cloud services used by the organization."
+        },
+        {
+          "id": "B",
+          "text": "To provide a discoverable inventory of available platform capabilities and services that developers can self-service."
+        },
+        {
+          "id": "C",
+          "text": "To store source code for all microservices."
+        },
+        {
+          "id": "D",
+          "text": "To manage employee access credentials."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "A service catalog in an IDP provides a centralized, discoverable inventory of all platform capabilities and services available to developers. It enables self-service by allowing developers to browse, understand, and provision services without needing to know implementation details or contact the platform team. Modern service catalogs often include metadata about ownership, documentation, dependencies, and health status of services.",
+      "tags": [
+        "service catalog",
+        "IDP",
+        "self-service",
+        "discovery",
+        "developer portal"
+      ]
+    },
+    {
+      "id": "CNPA-165",
+      "domain": "Measuring your Platform",
+      "topic": "DORA Metrics for Platform Initiatives",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "Which of the following is NOT one of DORA's four key software delivery metrics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deployment frequency"
+        },
+        {
+          "id": "B",
+          "text": "Change lead time"
+        },
+        {
+          "id": "C",
+          "text": "Lines of code per developer"
+        },
+        {
+          "id": "D",
+          "text": "Change fail percentage"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation": "DORA's four key metrics are: Deployment Frequency (how often code is deployed to production), Change Lead Time (time from commit to production), Change Fail Percentage (percentage of deployments causing failures), and Failed Deployment Recovery Time (time to recover from failures). Lines of code is not a DORA metric and is generally considered a poor measure of productivity as it doesn't correlate with value delivery.",
+      "tags": [
+        "DORA",
+        "metrics",
+        "deployment frequency",
+        "lead time",
+        "change fail rate"
+      ]
+    },
+    {
+      "id": "CNPA-166",
+      "domain": "Measuring your Platform",
+      "topic": "DORA Metrics for Platform Initiatives",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "According to DORA research, what is the relationship between software delivery speed and stability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Speed and stability are always trade-offs; improving one necessarily degrades the other."
+        },
+        {
+          "id": "B",
+          "text": "Speed and stability are correlated; top performers excel at both while low performers struggle with both."
+        },
+        {
+          "id": "C",
+          "text": "Stability should always be prioritized over speed in enterprise environments."
+        },
+        {
+          "id": "D",
+          "text": "Speed metrics are only relevant for startups, not established organizations."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "DORA's research has consistently shown that speed and stability are not trade-offs\u2014they are correlated. Elite and high-performing teams achieve both fast delivery (high deployment frequency, low lead time) AND high stability (low change fail rate, fast recovery time). This challenges the traditional assumption that moving fast means breaking things. The research shows the real trade-off is between 'better software faster' and 'worse software slower.'",
+      "tags": [
+        "DORA",
+        "speed",
+        "stability",
+        "performance",
+        "research"
+      ]
+    },
+    {
+      "id": "CNPA-167",
+      "domain": "Measuring your Platform",
+      "topic": "Platform Efficiency and Team Productivity",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "How should a platform team measure the success of their platform according to the CNCF Platforms White Paper?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By counting the number of features the platform team ships per quarter."
+        },
+        {
+          "id": "B",
+          "text": "By measuring user satisfaction, organizational efficiency, and the impact on product delivery for their internal customers."
+        },
+        {
+          "id": "C",
+          "text": "By tracking the total cost of the platform infrastructure."
+        },
+        {
+          "id": "D",
+          "text": "By comparing their platform to competitors' public offerings."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "The CNCF Platforms White Paper recommends measuring platform success through three lenses: user satisfaction and productivity (are developers happy and productive?), organizational efficiency (is the platform reducing duplication and enabling scale?), and product/feature delivery (is the platform helping teams deliver value faster?). These outcome-focused metrics align with treating the platform as a product that serves internal customers.",
+      "tags": [
+        "platform metrics",
+        "success measurement",
+        "user satisfaction",
+        "CNCF",
+        "platform as product"
+      ]
+    },
+    {
+      "id": "CNPA-168",
+      "domain": "Platform Observability, Security, and Conformance",
+      "topic": "Observability Fundamentals: Traces, Metrics, Logs, and Events",
+      "difficulty": "easy",
+      "question_type": "single_choice",
+      "question_text": "What type of observability data is best suited for tracking a single user request as it flows through multiple microservices?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Metrics"
+        },
+        {
+          "id": "B",
+          "text": "Logs"
+        },
+        {
+          "id": "C",
+          "text": "Distributed traces"
+        },
+        {
+          "id": "D",
+          "text": "Events"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation": "Distributed traces are specifically designed to follow a request's journey across multiple services in a distributed system. Each trace contains spans that represent individual operations, linked together by trace and span IDs. This allows operators to visualize the complete request path, identify which service caused latency or errors, and understand dependencies between services\u2014capabilities that logs and metrics alone cannot provide.",
+      "tags": [
+        "distributed tracing",
+        "observability",
+        "microservices",
+        "spans",
+        "request tracking"
+      ]
+    },
+    {
+      "id": "CNPA-169",
+      "domain": "Platform Observability, Security, and Conformance",
+      "topic": "Policy Engines for Platform Governance",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is the 'policy as code' approach in platform governance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Writing application business logic in a policy language."
+        },
+        {
+          "id": "B",
+          "text": "Defining governance rules in version-controlled, machine-readable formats that can be automatically enforced."
+        },
+        {
+          "id": "C",
+          "text": "Storing security policies in encrypted databases."
+        },
+        {
+          "id": "D",
+          "text": "Manually documenting all organizational policies in wikis."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "Policy as code means expressing governance rules, security requirements, and compliance constraints in version-controlled, machine-readable formats (like Rego for OPA or YAML for Kyverno). These policies can be automatically enforced by admission controllers, CI/CD pipelines, or runtime agents. This approach enables consistent enforcement, auditability, collaboration through code review, and the ability to test policies before deployment.",
+      "tags": [
+        "policy as code",
+        "governance",
+        "OPA",
+        "Rego",
+        "compliance",
+        "automation"
+      ]
+    },
+    {
+      "id": "CNPA-170",
+      "domain": "Platform Observability, Security, and Conformance",
+      "topic": "Kubernetes Security Essentials",
+      "difficulty": "hard",
+      "question_type": "single_choice",
+      "question_text": "What is the principle of least privilege as applied to Kubernetes RBAC?",
+      "options": [
+        {
+          "id": "A",
+          "text": "All users should have cluster-admin access to simplify troubleshooting."
+        },
+        {
+          "id": "B",
+          "text": "Users and service accounts should only have the minimum permissions necessary to perform their required tasks."
+        },
+        {
+          "id": "C",
+          "text": "Privileges should be granted based on seniority within the organization."
+        },
+        {
+          "id": "D",
+          "text": "All pods should run as root to ensure they have sufficient permissions."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "The principle of least privilege in Kubernetes RBAC means granting users, service accounts, and applications only the minimum permissions they need to perform their specific tasks. This limits the blast radius of compromised credentials or misconfigured applications. Platform teams should define granular Roles and ClusterRoles, bind them appropriately, and regularly audit permissions to ensure they remain minimal and necessary.",
+      "tags": [
+        "RBAC",
+        "least privilege",
+        "security",
+        "Kubernetes",
+        "access control"
+      ]
+    },
+    {
+      "id": "CNPA-171",
+      "domain": "Platform APIs and Provisioning Infrastructure",
+      "topic": "APIs for Self-Service Platforms (CRDs)",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "What is a Composite Resource in Crossplane terminology?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A resource that combines multiple container images into one."
+        },
+        {
+          "id": "B",
+          "text": "A higher-level abstraction that bundles multiple infrastructure resources into a single, reusable unit."
+        },
+        {
+          "id": "C",
+          "text": "A Kubernetes pod with multiple containers."
+        },
+        {
+          "id": "D",
+          "text": "A network policy that spans multiple namespaces."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "In Crossplane, a Composite Resource (XR) is a higher-level abstraction that bundles multiple managed resources into a single, reusable unit. For example, a 'ProductionDatabase' composite might include a cloud database instance, security groups, backup configurations, and monitoring setup. Platform teams define these compositions to provide developers with simplified, opinionated interfaces while hiding infrastructure complexity.",
+      "tags": [
+        "Crossplane",
+        "Composite Resource",
+        "XR",
+        "abstraction",
+        "infrastructure"
+      ]
+    },
+    {
+      "id": "CNPA-172",
+      "domain": "IDPs and Developer Experience",
+      "topic": "AI/ML in Platform Automation",
+      "difficulty": "medium",
+      "question_type": "single_choice",
+      "question_text": "How can AI/ML capabilities enhance Internal Developer Platforms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By replacing all human platform engineers with automated systems."
+        },
+        {
+          "id": "B",
+          "text": "By providing intelligent recommendations, automating routine tasks, and enabling predictive insights for capacity planning and incident detection."
+        },
+        {
+          "id": "C",
+          "text": "By generating all application code automatically without developer input."
+        },
+        {
+          "id": "D",
+          "text": "By eliminating the need for observability and monitoring."
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation": "AI/ML can enhance IDPs by augmenting human capabilities rather than replacing them. Examples include: intelligent code completion and suggestions, automated anomaly detection in observability data, predictive scaling based on usage patterns, smart incident routing and remediation suggestions, and natural language interfaces for platform interactions. These capabilities reduce cognitive load and help developers and platform teams work more efficiently.",
+      "tags": [
+        "AI",
+        "ML",
+        "automation",
+        "IDP",
+        "intelligent platform"
+      ]
     }
   ]
 }
